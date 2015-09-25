@@ -5,15 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sinoptik"
         mc:Ignorable="d"
-        Title="Sinoptik v 1.0" Height="990.344" Width="925.886">
+        Title="Sinoptik v 1.0" WindowState="Maximized" MinWidth="750" MinHeight="500">
     <Grid>
-        <Label x:Name="label" Content="Синоптик" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="77" Width="252" FontSize="32" FontWeight="Bold"/>
-        <Calendar HorizontalAlignment="Left" Margin="715,25,0,0" VerticalAlignment="Top"/>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="168" Margin="469,25,0,0" VerticalAlignment="Top" Width="179" RenderTransformOrigin="0.5,0.5">
-            <Label x:Name="label1" Content="Label" HorizontalAlignment="Left" Height="61" Margin="103,20,0,0" VerticalAlignment="Top" Width="65"/>
-        </Border>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="55" Margin="489,46,0,0" VerticalAlignment="Top" Width="58"/>
-        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="712" Margin="25,219,0,0" VerticalAlignment="Top" Width="869">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="label" Grid.Column="0" Content="Синоптик" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="77" Width="252" FontSize="32" FontWeight="Bold"/>
+            <Calendar Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Border Grid.Column="1" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="168" VerticalAlignment="Center" Width="179" RenderTransformOrigin="0.5,0.5">
+                <Label x:Name="label1" Content="Label" HorizontalAlignment="Left" Height="61" VerticalAlignment="Center" Width="65" Margin="103,30,0,75"/>
+            
+            </Border>
+            <Image x:Name="image" Grid.Column="1" HorizontalAlignment="Left" Height="55" VerticalAlignment="Top" Width="58" Margin="88,45,0,0"/>
+
+        </Grid>
+        
+
+        <TabControl x:Name="tabControl" Grid.Row="1"  Margin="8"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
             <TabItem Header="Ввод данных">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
