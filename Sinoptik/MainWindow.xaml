@@ -21,7 +21,7 @@
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
             <TabItem Header="Краткая сводка">
-                <Grid Background="#FFE5E5E6"/>
+                <Grid Background="AliceBlue"/>
             </TabItem>
             <TabItem Header="Прогноз">
                 <Grid Background="#FFE5E5E5"/>
