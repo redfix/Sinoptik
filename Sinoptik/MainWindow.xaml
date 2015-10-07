@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sinoptik"
         mc:Ignorable="d"
-        Title="Sinoptik v 1.0" WindowState="Maximized" MinWidth="750" MinHeight="500">
+        Title="Sinoptik v 1.0" WindowState="Maximized" MinWidth="750" MinHeight="500" d:DesignWidth="1138.5" d:DesignHeight="1025.95">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="200"></RowDefinition>
@@ -22,16 +22,189 @@
             <Calendar Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <Border Grid.Column="1" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="168" VerticalAlignment="Center" Width="179" RenderTransformOrigin="0.5,0.5">
                 <Label x:Name="label1" Content="Label" HorizontalAlignment="Left" Height="61" VerticalAlignment="Center" Width="65" Margin="103,30,0,75"/>
-            
+
             </Border>
             <Image x:Name="image" Grid.Column="1" HorizontalAlignment="Left" Height="55" VerticalAlignment="Top" Width="58" Margin="88,45,0,0"/>
 
         </Grid>
-        
+
 
         <TabControl x:Name="tabControl" Grid.Row="1"  Margin="8"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
             <TabItem Header="Ввод данных">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="273*"></ColumnDefinition>
+                        <ColumnDefinition Width="431*"></ColumnDefinition>
+                        <ColumnDefinition Width="404*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0" Margin="4,4,4,4">
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Label  x:Name="GridLabel00" Grid.Row="0" Content="ЧСС, уд/мин" VerticalAlignment="Center" FontSize="15" Margin="4,4,4,4"></Label>
+                        <Label  x:Name="GridLabel01" Grid.Row="1" Content="ДАД" VerticalAlignment="Center" FontSize="15" Margin="4,4,4,4"></Label>
+                        <Label  x:Name="GridLabel02" Grid.Row="2" Content="САД" VerticalAlignment="Center" FontSize="15" Margin="4,4,4,4"></Label>
+                        <TextBlock  x:Name="GridLabel03" TextWrapping="WrapWithOverflow" Grid.Row="3" VerticalAlignment="Center" FontSize="15" Margin="4,53,118,64">Частота дыхания, вдох/мин</TextBlock>
+                        <TextBox x:Name="ChSS" Grid.Row="0" HorizontalAlignment="Left" Height="35" Margin="10,108,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="66"/>
+                        <TextBox x:Name="DAD" Grid.Row="1" HorizontalAlignment="Left" Height="35" Margin="10,108,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="66"/>
+                        <TextBox x:Name="SAD" Grid.Row="2" HorizontalAlignment="Left" Height="35" Margin="10,108,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="66"/>
+                        <TextBox x:Name="Breath" Grid.Row="3" HorizontalAlignment="Left" Height="35" Margin="10,112,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="66"/>
+
+                    </Grid>
+
+                    <Grid Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="135*"></ColumnDefinition>
+                            <ColumnDefinition Width="91*"></ColumnDefinition>
+                            <ColumnDefinition Width="210*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock  x:Name="GridLabel200" Grid.Column ="0" Grid.Row="0" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,15" Height="40">Самочувствие хорошее</TextBlock>
+                        <TextBlock  x:Name="GridLabel220" Grid.Column ="2" Grid.Row="0" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,15" Height="40">Самочувствие плохое</TextBlock>
+                        <TextBlock  x:Name="GridLabel201" Grid.Column ="0" Grid.Row="1" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,25" Height="20">Полный сил</TextBlock>
+                        <TextBlock  x:Name="GridLabel221" Grid.Column ="2" Grid.Row="1" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,25" Height="20">Обессиленный</TextBlock>
+                        <TextBlock  x:Name="GridLabel202" Grid.Column ="0" Grid.Row="2" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,25" Height="20">Отдохнувший</TextBlock>
+                        <TextBlock  x:Name="GridLabel222" Grid.Column ="2" Grid.Row="2" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,25" Height="20">Усталый</TextBlock>
+                        <TextBlock  x:Name="GridLabel203" Grid.Column ="0" Grid.Row="3" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,25" Height="20">Пассивный</TextBlock>
+                        <TextBlock  x:Name="GridLabel223" Grid.Column ="2" Grid.Row="3" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,25" Height="20">Активный</TextBlock>
+                        <TextBlock  x:Name="GridLabel204" Grid.Column ="0" Grid.Row="4" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,26,4,25" Height="20">Сонливый</TextBlock>
+                        <TextBlock  x:Name="GridLabel224" Grid.Column ="2" Grid.Row="4" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,26,4,25" Height="20">Возбужденный</TextBlock>
+                        <TextBlock  x:Name="GridLabel205" Grid.Column ="0" Grid.Row="5" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,15" Height="40">Желание отдохнуть</TextBlock>
+                        <TextBlock  x:Name="GridLabel225" Grid.Column ="2" Grid.Row="5" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,25" Height="20">Желание работать</TextBlock>
+                        <TextBlock  x:Name="GridLabel206" Grid.Column ="0" Grid.Row="6" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,15,4,16" Height="40">Хорошее настроение</TextBlock>
+                        <TextBlock  x:Name="GridLabel226" Grid.Column ="2" Grid.Row="6" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,25,4,26" Height="20">Плохое настроение</TextBlock>
+                        <TextBlock  x:Name="GridLabel207" Grid.Column ="0" Grid.Row="7" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,25" Height="20">Спокойный</TextBlock>
+                        <TextBlock  x:Name="GridLabel227" Grid.Column ="2" Grid.Row="7" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,25" Height="20">Озабоченный</TextBlock>
+                        <TextBlock  x:Name="GridLabel208" Grid.Column ="0" Grid.Row="8" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,26,4,25" Height="20">Оптимистичный</TextBlock>
+                        <TextBlock  x:Name="GridLabel228" Grid.Column ="2" Grid.Row="8" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,26,4,25" Height="20">Пессимистичный</TextBlock>
+                        
+                        <ComboBox x:Name="comboBox0" Grid.Column="1"  Grid.Row="0" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Width="33"></ComboBox>
+                        <ComboBox x:Name="comboBox1" Grid.Column="1"  Grid.Row="1" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Width="33"></ComboBox>
+                        <ComboBox x:Name="comboBox2" Grid.Column="1"  Grid.Row="2" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Width="33"></ComboBox>
+                        <ComboBox x:Name="comboBox3" Grid.Column="1"  Grid.Row="3" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Width="33"></ComboBox>
+                        <ComboBox x:Name="comboBox4" Grid.Column="1"  Grid.Row="4" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Width="33"></ComboBox>
+                        <ComboBox x:Name="comboBox5" Grid.Column="1"  Grid.Row="5" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Width="33"></ComboBox>
+                        <ComboBox x:Name="comboBox6" Grid.Column="1"  Grid.Row="6" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Width="33"></ComboBox>
+                        <ComboBox x:Name="comboBox7" Grid.Column="1"  Grid.Row="7" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Width="33"></ComboBox>
+                        <ComboBox x:Name="comboBox8" Grid.Column="1"  Grid.Row="8" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Width="33"></ComboBox>
+                        <ComboBox x:Name="comboBox9" Grid.Column="1"  Grid.Row="9" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Width="33"></ComboBox>
+                    </Grid>
+
+                    <Grid Grid.Column="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <RadioButton x:Name="GridLabel20" Grid.Column="0" Grid.Row="0"  FontSize="15" Margin="25,5,4,4" >
+                            <RadioButton.Content>
+                                <TextBlock Text="Боль отсутствует" TextWrapping="Wrap"/>
+                            </RadioButton.Content>
+                        </RadioButton>
+                        <RadioButton x:Name="GridLabel21" Grid.Column="0" Grid.Row="0"  FontSize="15" Margin="25,40,4,4" >
+                            <RadioButton.Content>
+                                <TextBlock Text="Легкая боль/боль можно игнорировать" TextWrapping="Wrap"/>
+                            </RadioButton.Content>
+                        </RadioButton>
+                        <RadioButton x:Name="GridLabel22" Grid.Column="0" Grid.Row="0"  FontSize="15" Margin="25,75,4,4" >
+                            <RadioButton.Content>
+                                <TextBlock Text="Умеренная боль/боль мешает деятельности" TextWrapping="Wrap"/>
+                            </RadioButton.Content>
+                        </RadioButton>
+                        <RadioButton x:Name="GridLabel23" Grid.Column="0" Grid.Row="0"  FontSize="15" Margin="25,110,4,4" >
+                            <RadioButton.Content>
+                                <TextBlock Text="Умеренная боль/боль мешает концентрироваться" TextWrapping="Wrap"/>
+                            </RadioButton.Content>
+                        </RadioButton>
+                        <RadioButton x:Name="GridLabel24" Grid.Column="0" Grid.Row="0"  FontSize="15" Margin="25,145,4,4" >
+                            <RadioButton.Content>
+                                <TextBlock Text="Сильная боль/мешает основным потребностям" TextWrapping="Wrap"/>
+                            </RadioButton.Content>
+                        </RadioButton>
+                        <RadioButton x:Name="GridLabel25" Grid.Column="0" Grid.Row="0"  FontSize="15" Margin="25,180,4,4" >
+                            <RadioButton.Content>
+                                <TextBlock Text="Невыносимая боль/необходим постельный режим" TextWrapping="Wrap"/>
+                            </RadioButton.Content>
+                        </RadioButton>
+                        <RadioButton x:Name="GridLabel2200" Grid.Column="0" Grid.Row="1"  FontSize="15" Margin="25,5,4,4" >
+                            <RadioButton.Content>
+                                <TextBlock Text="Боль отсутствует" TextWrapping="Wrap"/>
+                            </RadioButton.Content>
+                        </RadioButton>
+                        <RadioButton x:Name="GridLabel2211" Grid.Column="0" Grid.Row="1"  FontSize="15" Margin="25,40,4,4" >
+                            <RadioButton.Content>
+                                <TextBlock Text="Легкая боль/боль можно игнорировать" TextWrapping="Wrap"/>
+                            </RadioButton.Content>
+                        </RadioButton>
+                        <RadioButton x:Name="GridLabel2222" Grid.Column="0" Grid.Row="1"  FontSize="15" Margin="25,75,4,4" >
+                            <RadioButton.Content>
+                                <TextBlock Text="Умеренная боль/боль мешает деятельности" TextWrapping="Wrap"/>
+                            </RadioButton.Content>
+                        </RadioButton>
+                        <RadioButton x:Name="GridLabel2233" Grid.Column="0" Grid.Row="1"  FontSize="15" Margin="25,110,4,4" >
+                            <RadioButton.Content>
+                                <TextBlock Text="Умеренная боль/боль мешает концентрироваться" TextWrapping="Wrap"/>
+                            </RadioButton.Content>
+                        </RadioButton>
+                        <RadioButton x:Name="GridLabel2244" Grid.Column="0" Grid.Row="1"  FontSize="15" Margin="25,145,4,4" >
+                            <RadioButton.Content>
+                                <TextBlock Text="Сильная боль/мешает основным потребностям" TextWrapping="Wrap"/>
+                            </RadioButton.Content>
+                        </RadioButton>
+                        <RadioButton x:Name="GridLabel2255" Grid.Column="0" Grid.Row="1"  FontSize="15" Margin="25,180,4,4" >
+                            <RadioButton.Content>
+                                <TextBlock Text="Невыносимая боль/необходим постельный режим" TextWrapping="Wrap"/>
+                            </RadioButton.Content>
+                        </RadioButton>
+                        <RadioButton x:Name="GridLabel520" Grid.Column="0" Grid.Row="2"  FontSize="15" Margin="25,5,4,4" >
+                            <RadioButton.Content>
+                                <TextBlock Text="Боль отсутствует" TextWrapping="Wrap"/>
+                            </RadioButton.Content>
+                        </RadioButton>
+                        <RadioButton x:Name="GridLabel521" Grid.Column="0" Grid.Row="2"  FontSize="15" Margin="25,40,4,4" >
+                            <RadioButton.Content>
+                                <TextBlock Text="Легкая боль/боль можно игнорировать" TextWrapping="Wrap"/>
+                            </RadioButton.Content>
+                        </RadioButton>
+                        <RadioButton x:Name="GridLabel522" Grid.Column="0" Grid.Row="2"  FontSize="15" Margin="25,75,4,4" >
+                            <RadioButton.Content>
+                                <TextBlock Text="Умеренная боль/боль мешает деятельности" TextWrapping="Wrap"/>
+                            </RadioButton.Content>
+                        </RadioButton>
+                        <RadioButton x:Name="GridLabel523" Grid.Column="0" Grid.Row="2"  FontSize="15" Margin="25,110,4,4" >
+                            <RadioButton.Content>
+                                <TextBlock Text="Умеренная боль/боль мешает концентрироваться" TextWrapping="Wrap"/>
+                            </RadioButton.Content>
+                        </RadioButton>
+                        <RadioButton x:Name="GridLabel524" Grid.Column="0" Grid.Row="2"  FontSize="15" Margin="25,145,4,4" >
+                            <RadioButton.Content>
+                                <TextBlock Text="Сильная боль/мешает основным потребностям" TextWrapping="Wrap"/>
+                            </RadioButton.Content>
+                        </RadioButton>
+                        <RadioButton x:Name="GridLabel525" Grid.Column="0" Grid.Row="2"  FontSize="15" Margin="25,180,4,4" >
+                            <RadioButton.Content>
+                                <TextBlock Text="Невыносимая боль/необходим постельный режим" TextWrapping="Wrap"/>
+                            </RadioButton.Content>
+                        </RadioButton>
+                    </Grid>                    
+
+                </Grid>
             </TabItem>
             <TabItem Header="Тренды">
                 <Grid Background="#FFE5E5E5"/>
