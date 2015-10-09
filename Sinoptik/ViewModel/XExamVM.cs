@@ -54,7 +54,7 @@ namespace Sinoptik.ViewModel
             }
         }
 
-        internal Int16 HeartRate
+        public Int16 HeartRate
         {
             get
             {

@@ -22,20 +22,27 @@ namespace Sinoptik
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        XMainWindowVM _mwin;
         public MainWindow()
         {
             InitializeComponent();
 
+            _mwin = new XMainWindowVM();
 
-            using (XDBContext dbContext = new XDBContext())
-            {
+            DataContext = _mwin.Exam;
 
 
 
-                var c = dbContext.Clients.Include("ExamsCollection.Weather")
-                                                .Include("ExamsCollection.ObjParams")
-                                                .Include("ExamsCollection.SubjParams")
-                                                .Include("ExamsCollection.SANTest");
+            //using (XDBContext dbContext = new XDBContext())
+            //{
+
+
+
+            //    var c = dbContext.Clients.Include("ExamsCollection.Weather")
+            //                                    .Include("ExamsCollection.ObjParams")
+            //                                    .Include("ExamsCollection.SubjParams")
+            //                                    .Include("ExamsCollection.SANTest");
 
 
 
@@ -75,8 +82,12 @@ namespace Sinoptik
                 //dbContext.Clients
 
                 //dbContext.SaveChanges();
-            }
-                       
         }
+
+        private void WindowClosed(object sender, EventArgs e)
+        {
+            _mwin.SaveChanges();
+        }
+    
     }
 }
