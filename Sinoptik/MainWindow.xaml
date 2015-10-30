@@ -92,18 +92,19 @@
                         <TextBlock  x:Name="GridLabel227" Grid.Column ="2" Grid.Row="7" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,25" Height="20">Озабоченный</TextBlock>
                         <TextBlock  x:Name="GridLabel208" Grid.Column ="0" Grid.Row="8" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,26,4,25" Height="20">Оптимистичный</TextBlock>
                         <TextBlock  x:Name="GridLabel228" Grid.Column ="2" Grid.Row="8" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,26,4,25" Height="20">Пессимистичный</TextBlock>
-                        
-                        <ComboBox x:Name="comboBox0" Grid.Column="1"  Grid.Row="0" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Width="33"></ComboBox>
-                        <ComboBox x:Name="comboBox1" Grid.Column="1"  Grid.Row="1" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Width="33"></ComboBox>
-                        <ComboBox x:Name="comboBox2" Grid.Column="1"  Grid.Row="2" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Width="33"></ComboBox>
-                        <ComboBox x:Name="comboBox3" Grid.Column="1"  Grid.Row="3" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Width="33"></ComboBox>
-                        <ComboBox x:Name="comboBox4" Grid.Column="1"  Grid.Row="4" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Width="33"></ComboBox>
-                        <ComboBox x:Name="comboBox5" Grid.Column="1"  Grid.Row="5" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Width="33"></ComboBox>
-                        <ComboBox x:Name="comboBox6" Grid.Column="1"  Grid.Row="6" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Width="33"></ComboBox>
-                        <ComboBox x:Name="comboBox7" Grid.Column="1"  Grid.Row="7" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Width="33"></ComboBox>
-                        <ComboBox x:Name="comboBox8" Grid.Column="1"  Grid.Row="8" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Width="33"></ComboBox>
-                        <ComboBox x:Name="comboBox9" Grid.Column="1"  Grid.Row="9" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Width="33"></ComboBox>
-                    </Grid>
+
+            <RadioButton x:Name="radio01" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center">
+              <RadioButton.Content>
+                <TextBlock Text="3"></TextBlock>
+              </RadioButton.Content>
+            </RadioButton>
+            <RadioButton x:Name="radio02" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center">
+              <RadioButton.Content>
+                <TextBlock Text="2"></TextBlock>
+              </RadioButton.Content>
+            </RadioButton>
+
+          </Grid>
 
                     <Grid Grid.Column="2">
                         <Grid.RowDefinitions>
