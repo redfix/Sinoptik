@@ -31,11 +31,11 @@
 
         <TabControl x:Name="tabControl" Grid.Row="1"  Margin="8"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
             <TabItem Header="Ввод данных">
-                <Grid Background="#FFE5E5E5">
+                <Grid Background="#FFE5E5E5" Margin="0,28,0,-28">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="273*"></ColumnDefinition>
-                        <ColumnDefinition Width="431*"></ColumnDefinition>
-                        <ColumnDefinition Width="404*"></ColumnDefinition>
+                        <ColumnDefinition Width="188*"></ColumnDefinition>
+                        <ColumnDefinition Width="541*"></ColumnDefinition>
+                        <ColumnDefinition Width="379*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
 
                     <Grid Grid.Column="0" Margin="4,4,4,4">
@@ -57,7 +57,7 @@
 
                     </Grid>
 
-                    <Grid Grid.Column="1">
+                    <Grid Grid.Column="1" Margin="0,0,0,25">
                         <Grid.RowDefinitions>
                             <RowDefinition></RowDefinition>
                             <RowDefinition></RowDefinition>
@@ -70,41 +70,370 @@
                             <RowDefinition></RowDefinition>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="135*"></ColumnDefinition>
-                            <ColumnDefinition Width="91*"></ColumnDefinition>
-                            <ColumnDefinition Width="210*"></ColumnDefinition>
+                            <ColumnDefinition Width="123*"></ColumnDefinition>
+                            <ColumnDefinition Width="258*"></ColumnDefinition>
+                            <ColumnDefinition Width="160*"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <TextBlock  x:Name="GridLabel200" Grid.Column ="0" Grid.Row="0" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,15" Height="40">Самочувствие хорошее</TextBlock>
-                        <TextBlock  x:Name="GridLabel220" Grid.Column ="2" Grid.Row="0" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,15" Height="40">Самочувствие плохое</TextBlock>
-                        <TextBlock  x:Name="GridLabel201" Grid.Column ="0" Grid.Row="1" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,25" Height="20">Полный сил</TextBlock>
-                        <TextBlock  x:Name="GridLabel221" Grid.Column ="2" Grid.Row="1" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,25" Height="20">Обессиленный</TextBlock>
-                        <TextBlock  x:Name="GridLabel202" Grid.Column ="0" Grid.Row="2" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,25" Height="20">Отдохнувший</TextBlock>
-                        <TextBlock  x:Name="GridLabel222" Grid.Column ="2" Grid.Row="2" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,25" Height="20">Усталый</TextBlock>
-                        <TextBlock  x:Name="GridLabel203" Grid.Column ="0" Grid.Row="3" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,25" Height="20">Пассивный</TextBlock>
-                        <TextBlock  x:Name="GridLabel223" Grid.Column ="2" Grid.Row="3" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,25" Height="20">Активный</TextBlock>
-                        <TextBlock  x:Name="GridLabel204" Grid.Column ="0" Grid.Row="4" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,26,4,25" Height="20">Сонливый</TextBlock>
-                        <TextBlock  x:Name="GridLabel224" Grid.Column ="2" Grid.Row="4" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,26,4,25" Height="20">Возбужденный</TextBlock>
-                        <TextBlock  x:Name="GridLabel205" Grid.Column ="0" Grid.Row="5" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,15" Height="40">Желание отдохнуть</TextBlock>
-                        <TextBlock  x:Name="GridLabel225" Grid.Column ="2" Grid.Row="5" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,25" Height="20">Желание работать</TextBlock>
-                        <TextBlock  x:Name="GridLabel206" Grid.Column ="0" Grid.Row="6" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,15,4,16" Height="40">Хорошее настроение</TextBlock>
-                        <TextBlock  x:Name="GridLabel226" Grid.Column ="2" Grid.Row="6" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,25,4,26" Height="20">Плохое настроение</TextBlock>
-                        <TextBlock  x:Name="GridLabel207" Grid.Column ="0" Grid.Row="7" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,25" Height="20">Спокойный</TextBlock>
-                        <TextBlock  x:Name="GridLabel227" Grid.Column ="2" Grid.Row="7" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,25" Height="20">Озабоченный</TextBlock>
-                        <TextBlock  x:Name="GridLabel208" Grid.Column ="0" Grid.Row="8" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,26,4,25" Height="20">Оптимистичный</TextBlock>
-                        <TextBlock  x:Name="GridLabel228" Grid.Column ="2" Grid.Row="8" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,26,4,25" Height="20">Пессимистичный</TextBlock>
+                        <TextBlock  x:Name="GridLabel200" Grid.Column ="0" Grid.Row="0" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,21,4,20" Height="40">Самочувствие хорошее</TextBlock>
+                        <TextBlock  x:Name="GridLabel220" Grid.Column ="2" Grid.Row="0" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,21,4,20" Height="40">Самочувствие плохое</TextBlock>
+                        <TextBlock  x:Name="GridLabel201" Grid.Column ="0" Grid.Row="1" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,31,4,30" Height="20">Полный сил</TextBlock>
+                        <TextBlock  x:Name="GridLabel221" Grid.Column ="2" Grid.Row="1" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,31,4,30" Height="20">Обессиленный</TextBlock>
+                        <TextBlock  x:Name="GridLabel202" Grid.Column ="0" Grid.Row="2" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,30,4,31" Height="20">Отдохнувший</TextBlock>
+                        <TextBlock  x:Name="GridLabel222" Grid.Column ="2" Grid.Row="2" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,30,4,31" Height="20">Усталый</TextBlock>
+                        <TextBlock  x:Name="GridLabel203" Grid.Column ="0" Grid.Row="3" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,31,4,30" Height="20">Пассивный</TextBlock>
+                        <TextBlock  x:Name="GridLabel223" Grid.Column ="2" Grid.Row="3" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,31,4,30" Height="20">Активный</TextBlock>
+                        <TextBlock  x:Name="GridLabel204" Grid.Column ="0" Grid.Row="4" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,31,4,30" Height="20">Сонливый</TextBlock>
+                        <TextBlock  x:Name="GridLabel224" Grid.Column ="2" Grid.Row="4" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,31,4,30" Height="20">Возбужденный</TextBlock>
+                        <TextBlock  x:Name="GridLabel205" Grid.Column ="0" Grid.Row="5" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,21,4,20" Height="40">Желание отдохнуть</TextBlock>
+                        <TextBlock  x:Name="GridLabel225" Grid.Column ="2" Grid.Row="5" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,31,4,30" Height="20">Желание работать</TextBlock>
+                        <TextBlock  x:Name="GridLabel206" Grid.Column ="0" Grid.Row="6" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,20,4,21" Height="40">Хорошее настроение</TextBlock>
+                        <TextBlock  x:Name="GridLabel226" Grid.Column ="2" Grid.Row="6" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,30,4,31" Height="20">Плохое настроение</TextBlock>
+                        <TextBlock  x:Name="GridLabel207" Grid.Column ="0" Grid.Row="7" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,31,4,30" Height="20">Спокойный</TextBlock>
+                        <TextBlock  x:Name="GridLabel227" Grid.Column ="2" Grid.Row="7" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,31,4,30" Height="20">Озабоченный</TextBlock>
+                        <TextBlock  x:Name="GridLabel208" Grid.Column ="0" Grid.Row="8" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,31,4,30" Height="20">Оптимистичный</TextBlock>
+                        <TextBlock  x:Name="GridLabel228" Grid.Column ="2" Grid.Row="8" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,31,4,30" Height="20">Пессимистичный</TextBlock>
+                        <StackPanel Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" >
+                            <RadioButton x:Name="radio03" VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="3"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio02"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="2"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio01"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="1"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio00"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="0"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio0_1"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="1"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio0_2"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="2"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio0_3"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="3"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                        </StackPanel>
 
-            <RadioButton x:Name="radio01" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center">
-              <RadioButton.Content>
-                <TextBlock Text="3"></TextBlock>
-              </RadioButton.Content>
-            </RadioButton>
-            <RadioButton x:Name="radio02" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center">
-              <RadioButton.Content>
-                <TextBlock Text="2"></TextBlock>
-              </RadioButton.Content>
-            </RadioButton>
+                        <StackPanel Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" >
+                            <RadioButton x:Name="radio13" VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="3"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio12"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="2"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio11"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="1"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio10"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="0"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio1_1"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="1"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio1_2"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="2"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio1_3"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="3"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                        </StackPanel>
 
-          </Grid>
+                        <StackPanel Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" >
+                            <RadioButton x:Name="radio23" VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="3"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio22"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="2"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio21"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="1"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio20"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="0"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio2_1"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="1"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio2_2"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="2"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio2_3"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="3"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" >
+                            <RadioButton x:Name="radio33" VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="3"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio32"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="2"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio31"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="1"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio30"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="0"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio3_1"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="1"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio3_2"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="2"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio3_3"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="3"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" >
+                            <RadioButton x:Name="radio43" VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="3"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio42"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="2"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio41"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="1"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio40"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="0"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio4_1"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="1"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio4_2"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="2"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio4_3"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="3"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" >
+                            <RadioButton x:Name="radio53" VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="3"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio52"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="2"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio51"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="1"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio50"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="0"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio5_1"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="1"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio5_2"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="2"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio5_3"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="3"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" >
+                            <RadioButton x:Name="radio63" VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="3"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio62"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="2"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio61"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="1"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio60"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="0"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio6_1"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="1"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio6_2"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="2"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio6_3"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="3"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1" Grid.Row="7" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" >
+                            <RadioButton x:Name="radio73" VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="3"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio72"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="2"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio71"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="1"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio70"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="0"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio7_1"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="1"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio7_2"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="2"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio7_3"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="3"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1" Grid.Row="8" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" >
+                            <RadioButton x:Name="radio83" VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="3"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio82"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="2"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio81"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="1"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio80"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="0"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio8_1"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="1"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio8_2"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="2"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                            <RadioButton x:Name="radio8_3"  VerticalAlignment="Center" Height="15" Margin="2,2">
+                                <RadioButton.Content>
+                                    <TextBlock Text="3"></TextBlock>
+                                </RadioButton.Content>
+                            </RadioButton>
+                        </StackPanel>
+                    </Grid>
 
                     <Grid Grid.Column="2">
                         <Grid.RowDefinitions>
@@ -203,7 +532,11 @@
                                 <TextBlock Text="Невыносимая боль/необходим постельный режим" TextWrapping="Wrap"/>
                             </RadioButton.Content>
                         </RadioButton>
-                    </Grid>                    
+
+                        <ComboBox x:Name="comboBox" HorizontalAlignment="Left"  VerticalAlignment="Top">
+                            <ComboBoxItem>"Боль отсутствует"</ComboBoxItem>
+                        </ComboBox>
+                    </Grid>
 
                 </Grid>
             </TabItem>
