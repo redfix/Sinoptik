@@ -49,7 +49,7 @@
                         <Label  x:Name="GridLabel00" Grid.Row="0" Content="ЧСС, уд/мин" VerticalAlignment="Center" FontSize="15" Margin="4,4,4,4"></Label>
                         <Label  x:Name="GridLabel01" Grid.Row="1" Content="ДАД" VerticalAlignment="Center" FontSize="15" Margin="4,4,4,4"></Label>
                         <Label  x:Name="GridLabel02" Grid.Row="2" Content="САД" VerticalAlignment="Center" FontSize="15" Margin="4,4,4,4"></Label>
-                        <TextBlock  x:Name="GridLabel03" TextWrapping="WrapWithOverflow" Grid.Row="3" VerticalAlignment="Center" FontSize="15" Margin="4,53,118,64">Частота дыхания, вдох/мин</TextBlock>
+                        <TextBlock  x:Name="GridLabel03" TextWrapping="WrapWithOverflow" Grid.Row="3" VerticalAlignment="Center" FontSize="15" Margin="4,47,43,59">Частота дыхания, вдох/мин</TextBlock>
                         <TextBox x:Name="ChSS" Text="{Binding HeartRate}" Grid.Row="0" HorizontalAlignment="Left" Height="35" Margin="10,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="66"/>
                         <TextBox x:Name="DAD" Grid.Row="1" HorizontalAlignment="Left" Height="35" Margin="10,108,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="66"/>
                         <TextBox x:Name="SAD" Grid.Row="2" HorizontalAlignment="Left" Height="35" Margin="10,108,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="66"/>
@@ -442,99 +442,29 @@
                             <RowDefinition></RowDefinition>
                         </Grid.RowDefinitions>
 
-                        <RadioButton x:Name="GridLabel20" Grid.Column="0" Grid.Row="0"  FontSize="15" Margin="25,5,4,4" >
-                            <RadioButton.Content>
-                                <TextBlock Text="Боль отсутствует" TextWrapping="Wrap"/>
-                            </RadioButton.Content>
-                        </RadioButton>
-                        <RadioButton x:Name="GridLabel21" Grid.Column="0" Grid.Row="0"  FontSize="15" Margin="25,40,4,4" >
-                            <RadioButton.Content>
-                                <TextBlock Text="Легкая боль/боль можно игнорировать" TextWrapping="Wrap"/>
-                            </RadioButton.Content>
-                        </RadioButton>
-                        <RadioButton x:Name="GridLabel22" Grid.Column="0" Grid.Row="0"  FontSize="15" Margin="25,75,4,4" >
-                            <RadioButton.Content>
-                                <TextBlock Text="Умеренная боль/боль мешает деятельности" TextWrapping="Wrap"/>
-                            </RadioButton.Content>
-                        </RadioButton>
-                        <RadioButton x:Name="GridLabel23" Grid.Column="0" Grid.Row="0"  FontSize="15" Margin="25,110,4,4" >
-                            <RadioButton.Content>
-                                <TextBlock Text="Умеренная боль/боль мешает концентрироваться" TextWrapping="Wrap"/>
-                            </RadioButton.Content>
-                        </RadioButton>
-                        <RadioButton x:Name="GridLabel24" Grid.Column="0" Grid.Row="0"  FontSize="15" Margin="25,145,4,4" >
-                            <RadioButton.Content>
-                                <TextBlock Text="Сильная боль/мешает основным потребностям" TextWrapping="Wrap"/>
-                            </RadioButton.Content>
-                        </RadioButton>
-                        <RadioButton x:Name="GridLabel25" Grid.Column="0" Grid.Row="0"  FontSize="15" Margin="25,180,4,4" >
-                            <RadioButton.Content>
-                                <TextBlock Text="Невыносимая боль/необходим постельный режим" TextWrapping="Wrap"/>
-                            </RadioButton.Content>
-                        </RadioButton>
-                        <RadioButton x:Name="GridLabel2200" Grid.Column="0" Grid.Row="1"  FontSize="15" Margin="25,5,4,4" >
-                            <RadioButton.Content>
-                                <TextBlock Text="Боль отсутствует" TextWrapping="Wrap"/>
-                            </RadioButton.Content>
-                        </RadioButton>
-                        <RadioButton x:Name="GridLabel2211" Grid.Column="0" Grid.Row="1"  FontSize="15" Margin="25,40,4,4" >
-                            <RadioButton.Content>
-                                <TextBlock Text="Легкая боль/боль можно игнорировать" TextWrapping="Wrap"/>
-                            </RadioButton.Content>
-                        </RadioButton>
-                        <RadioButton x:Name="GridLabel2222" Grid.Column="0" Grid.Row="1"  FontSize="15" Margin="25,75,4,4" >
-                            <RadioButton.Content>
-                                <TextBlock Text="Умеренная боль/боль мешает деятельности" TextWrapping="Wrap"/>
-                            </RadioButton.Content>
-                        </RadioButton>
-                        <RadioButton x:Name="GridLabel2233" Grid.Column="0" Grid.Row="1"  FontSize="15" Margin="25,110,4,4" >
-                            <RadioButton.Content>
-                                <TextBlock Text="Умеренная боль/боль мешает концентрироваться" TextWrapping="Wrap"/>
-                            </RadioButton.Content>
-                        </RadioButton>
-                        <RadioButton x:Name="GridLabel2244" Grid.Column="0" Grid.Row="1"  FontSize="15" Margin="25,145,4,4" >
-                            <RadioButton.Content>
-                                <TextBlock Text="Сильная боль/мешает основным потребностям" TextWrapping="Wrap"/>
-                            </RadioButton.Content>
-                        </RadioButton>
-                        <RadioButton x:Name="GridLabel2255" Grid.Column="0" Grid.Row="1"  FontSize="15" Margin="25,180,4,4" >
-                            <RadioButton.Content>
-                                <TextBlock Text="Невыносимая боль/необходим постельный режим" TextWrapping="Wrap"/>
-                            </RadioButton.Content>
-                        </RadioButton>
-                        <RadioButton x:Name="GridLabel520" Grid.Column="0" Grid.Row="2"  FontSize="15" Margin="25,5,4,4" >
-                            <RadioButton.Content>
-                                <TextBlock Text="Боль отсутствует" TextWrapping="Wrap"/>
-                            </RadioButton.Content>
-                        </RadioButton>
-                        <RadioButton x:Name="GridLabel521" Grid.Column="0" Grid.Row="2"  FontSize="15" Margin="25,40,4,4" >
-                            <RadioButton.Content>
-                                <TextBlock Text="Легкая боль/боль можно игнорировать" TextWrapping="Wrap"/>
-                            </RadioButton.Content>
-                        </RadioButton>
-                        <RadioButton x:Name="GridLabel522" Grid.Column="0" Grid.Row="2"  FontSize="15" Margin="25,75,4,4" >
-                            <RadioButton.Content>
-                                <TextBlock Text="Умеренная боль/боль мешает деятельности" TextWrapping="Wrap"/>
-                            </RadioButton.Content>
-                        </RadioButton>
-                        <RadioButton x:Name="GridLabel523" Grid.Column="0" Grid.Row="2"  FontSize="15" Margin="25,110,4,4" >
-                            <RadioButton.Content>
-                                <TextBlock Text="Умеренная боль/боль мешает концентрироваться" TextWrapping="Wrap"/>
-                            </RadioButton.Content>
-                        </RadioButton>
-                        <RadioButton x:Name="GridLabel524" Grid.Column="0" Grid.Row="2"  FontSize="15" Margin="25,145,4,4" >
-                            <RadioButton.Content>
-                                <TextBlock Text="Сильная боль/мешает основным потребностям" TextWrapping="Wrap"/>
-                            </RadioButton.Content>
-                        </RadioButton>
-                        <RadioButton x:Name="GridLabel525" Grid.Column="0" Grid.Row="2"  FontSize="15" Margin="25,180,4,4" >
-                            <RadioButton.Content>
-                                <TextBlock Text="Невыносимая боль/необходим постельный режим" TextWrapping="Wrap"/>
-                            </RadioButton.Content>
-                        </RadioButton>
 
-                        <ComboBox x:Name="comboBox" HorizontalAlignment="Left"  VerticalAlignment="Top">
+                        <ComboBox x:Name="comboBox0" Grid.Row="0" Grid.Column ="2" Width="219" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <ComboBoxItem>"Боль отсутствует"</ComboBoxItem>
+                            <ComboBoxItem>"Умеренная боль/боль мешает деятельности"</ComboBoxItem>
+                            <ComboBoxItem>"Умеренная боль/боль мешает концентрироваться"</ComboBoxItem>
+                            <ComboBoxItem>"Сильная боль/мешает основным потребностям"</ComboBoxItem>
+                            <ComboBoxItem>"Невыносимая боль/необходим постельный режим"</ComboBoxItem>
+                        </ComboBox>
+
+                        <ComboBox x:Name="comboBox1" Grid.Row="1" Grid.Column ="2" Width="219" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <ComboBoxItem>"Боль отсутствует"</ComboBoxItem>
+                            <ComboBoxItem>"Умеренная боль/боль мешает деятельности"</ComboBoxItem>
+                            <ComboBoxItem>"Умеренная боль/боль мешает концентрироваться"</ComboBoxItem>
+                            <ComboBoxItem>"Сильная боль/мешает основным потребностям"</ComboBoxItem>
+                            <ComboBoxItem>"Невыносимая боль/необходим постельный режим"</ComboBoxItem>
+                        </ComboBox>
+
+                        <ComboBox x:Name="comboBox2" Grid.Row="2" Grid.Column ="2" Width="219" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <ComboBoxItem>"Боль отсутствует"</ComboBoxItem>
+                            <ComboBoxItem>"Умеренная боль/боль мешает деятельности"</ComboBoxItem>
+                            <ComboBoxItem>"Умеренная боль/боль мешает концентрироваться"</ComboBoxItem>
+                            <ComboBoxItem>"Сильная боль/мешает основным потребностям"</ComboBoxItem>
+                            <ComboBoxItem>"Невыносимая боль/необходим постельный режим"</ComboBoxItem>
                         </ComboBox>
                     </Grid>
 
