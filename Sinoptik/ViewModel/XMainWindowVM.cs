@@ -19,12 +19,12 @@ namespace Sinoptik.ViewModel
             Exam = new XExamVM();
             _context = new XDBContext();
 
-            var v = from cl in _context.Clients
-                    where cl.Id == 1
-                    select cl;
+            //var v = from cl in _context.Clients
+            //        where cl.Id == 1
+            //        select cl;
 
-            foreach (XClient c in v)
-                _client = new XClientVM(c);
+            //foreach (XClient c in v)
+            //    _client = new XClientVM(c);
 
             //  _act = new Action(SaveChanges);
         }
