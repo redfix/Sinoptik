@@ -32,7 +32,8 @@ namespace Sinoptik
 
             DataContext = _mwin.Exam;
 
-
+          //  ((Grid)RadioButtonGroup1.FindName("Grid")).Background = Brushes.Black;
+   
 
             //using (XDBContext dbContext = new XDBContext())
             //{
@@ -46,47 +47,49 @@ namespace Sinoptik
 
 
 
-                ////cl.Name = "Fktrcfylh";
-                //XExamVM ex = new XExamVM()
-                //{
+            ////cl.Name = "Fktrcfylh";
+            //XExamVM ex = new XExamVM()
+            //{
 
-                //};
+            //};
 
-                //ex.HeartRate = 88;
-                //ex.BodyTemp = 36.6f;
-                //ex.SBP = 121;
-                //ex.DBP = 82;
+            //ex.HeartRate = 88;
+            //ex.BodyTemp = 36.6f;
+            //ex.SBP = 121;
+            //ex.DBP = 82;
 
-                //ex.SAN.DesireToWork = 5;
-                //ex.SAN.Feeling = 6;
-                //ex.SAN.FullForceExhausted = 6;
-                //ex.SAN.Mood = 6;
-                //ex.SAN.PassivActiv = 5;
-                //ex.SAN.RestedTired = 6;
+            //ex.SAN.DesireToWork = 5;
+            //ex.SAN.Feeling = 6;
+            //ex.SAN.FullForceExhausted = 6;
+            //ex.SAN.Mood = 6;
+            //ex.SAN.PassivActiv = 5;
+            //ex.SAN.RestedTired = 6;
 
-                //ex.DateAndTime = DateTime.Now;
+            //ex.DateAndTime = DateTime.Now;
 
-                //ex.Weather.Local = "mayakovka";
-                //ex.Weather.Temp = 6;
-                //ex.Weather.Pressure = 745;
-                //ex.Weather.RainFall = 1;
-                //ex.Weather.Geomagnetic = 2;
-                //ex.Weather.Cloudly = 3;
+            //ex.Weather.Local = "mayakovka";
+            //ex.Weather.Temp = 6;
+            //ex.Weather.Pressure = 745;
+            //ex.Weather.RainFall = 1;
+            //ex.Weather.Geomagnetic = 2;
+            //ex.Weather.Cloudly = 3;
 
-                //ex.SubjParams.Headache = 7;
-                //ex.SubjParams.HeartPain = 1;
-                //ex.SubjParams.RheumaticPain = 1;
-                
+            //ex.SubjParams.Headache = 7;
+            //ex.SubjParams.HeartPain = 1;
+            //ex.SubjParams.RheumaticPain = 1;
 
-              //  cl.AddExam(ex);
-                //dbContext.Clients
 
-                //dbContext.SaveChanges();
+            //  cl.AddExam(ex);
+            //dbContext.Clients
+
+            //dbContext.SaveChanges();
         }
 
         private void WindowClosed(object sender, EventArgs e)
         {
             _mwin.SaveChanges();
+
+
         }
     
     }

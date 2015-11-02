@@ -34,7 +34,7 @@
                 <Grid Background="#FFE5E5E5" Margin="0,28,0,-28">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="188*"></ColumnDefinition>
-                        <ColumnDefinition Width="541*"></ColumnDefinition>
+                        <ColumnDefinition Width="450"></ColumnDefinition>
                         <ColumnDefinition Width="379*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
 
@@ -59,7 +59,7 @@
 
                     <Grid Grid.Column="1" Margin="0,0,0,25">
                         <Grid.RowDefinitions>
-                            <RowDefinition></RowDefinition>
+                            <RowDefinition Height="50"></RowDefinition>
                             <RowDefinition></RowDefinition>
                             <RowDefinition></RowDefinition>
                             <RowDefinition></RowDefinition>
@@ -70,12 +70,12 @@
                             <RowDefinition></RowDefinition>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="123*"></ColumnDefinition>
-                            <ColumnDefinition Width="258*"></ColumnDefinition>
-                            <ColumnDefinition Width="160*"></ColumnDefinition>
+                            <ColumnDefinition Width="150"></ColumnDefinition>
+                            <ColumnDefinition Width="150"></ColumnDefinition>
+                            <ColumnDefinition Width="150"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <TextBlock  x:Name="GridLabel200" Grid.Column ="0" Grid.Row="0" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,21,4,20" Height="40">Самочувствие хорошее</TextBlock>
-                        <TextBlock  x:Name="GridLabel220" Grid.Column ="2" Grid.Row="0" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,21,4,20" Height="40">Самочувствие плохое</TextBlock>
+                        <TextBlock  x:Name="GridLabel200" Grid.Column ="0" Grid.Row="0" TextWrapping="WrapWithOverflow" TextAlignment="Center" FontSize="15" Height="40">Самочувствие хорошее</TextBlock>
+                        <TextBlock  x:Name="GridLabel220" Grid.Column ="2" Grid.Row="0" TextWrapping="WrapWithOverflow" TextAlignment="Center" FontSize="15" Height="40">Самочувствие плохое</TextBlock>
                         <TextBlock  x:Name="GridLabel201" Grid.Column ="0" Grid.Row="1" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,31,4,30" Height="20">Полный сил</TextBlock>
                         <TextBlock  x:Name="GridLabel221" Grid.Column ="2" Grid.Row="1" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,31,4,30" Height="20">Обессиленный</TextBlock>
                         <TextBlock  x:Name="GridLabel202" Grid.Column ="0" Grid.Row="2" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,30,4,31" Height="20">Отдохнувший</TextBlock>
@@ -92,43 +92,8 @@
                         <TextBlock  x:Name="GridLabel227" Grid.Column ="2" Grid.Row="7" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,31,4,30" Height="20">Озабоченный</TextBlock>
                         <TextBlock  x:Name="GridLabel208" Grid.Column ="0" Grid.Row="8" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,31,4,30" Height="20">Оптимистичный</TextBlock>
                         <TextBlock  x:Name="GridLabel228" Grid.Column ="2" Grid.Row="8" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" FontSize="15" Margin="4,31,4,30" Height="20">Пессимистичный</TextBlock>
-                        <StackPanel Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" >
-                            <RadioButton x:Name="radio03" VerticalAlignment="Center" Height="15" Margin="2,2">
-                                <RadioButton.Content>
-                                    <TextBlock Text="3"></TextBlock>
-                                </RadioButton.Content>
-                            </RadioButton>
-                            <RadioButton x:Name="radio02"  VerticalAlignment="Center" Height="15" Margin="2,2">
-                                <RadioButton.Content>
-                                    <TextBlock Text="2"></TextBlock>
-                                </RadioButton.Content>
-                            </RadioButton>
-                            <RadioButton x:Name="radio01"  VerticalAlignment="Center" Height="15" Margin="2,2">
-                                <RadioButton.Content>
-                                    <TextBlock Text="1"></TextBlock>
-                                </RadioButton.Content>
-                            </RadioButton>
-                            <RadioButton x:Name="radio00"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="15" Margin="2,2">
-                                <RadioButton.Content>
-                                    <TextBlock Text="0"></TextBlock>
-                                </RadioButton.Content>
-                            </RadioButton>
-                            <RadioButton x:Name="radio0_1"  VerticalAlignment="Center" Height="15" Margin="2,2">
-                                <RadioButton.Content>
-                                    <TextBlock Text="1"></TextBlock>
-                                </RadioButton.Content>
-                            </RadioButton>
-                            <RadioButton x:Name="radio0_2"  VerticalAlignment="Center" Height="15" Margin="2,2">
-                                <RadioButton.Content>
-                                    <TextBlock Text="2"></TextBlock>
-                                </RadioButton.Content>
-                            </RadioButton>
-                            <RadioButton x:Name="radio0_3"  VerticalAlignment="Center" Height="15" Margin="2,2">
-                                <RadioButton.Content>
-                                    <TextBlock Text="3"></TextBlock>
-                                </RadioButton.Content>
-                            </RadioButton>
-                        </StackPanel>
+                        
+                        <local:XRadioButtonStackControl x:Name="RadioButtonGroup1" Grid.Column="1" Grid.Row="0"/>
 
                         <StackPanel Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" >
                             <RadioButton x:Name="radio13" VerticalAlignment="Center" Height="15" Margin="2,2">
