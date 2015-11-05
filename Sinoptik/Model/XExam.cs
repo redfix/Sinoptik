@@ -32,6 +32,8 @@ namespace Sinoptik.Model
         public Int32 SANTestId { get; set; }
         public XSANTest SANTest { get; set; }
 
+
+
         public XExam()
         {
             Weather = new XWeather();

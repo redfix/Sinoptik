@@ -1,10 +1,5 @@
 ﻿using Sinoptik.Model;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 
 namespace Sinoptik.ViewModel
 {
@@ -30,7 +25,7 @@ namespace Sinoptik.ViewModel
             }
         }
 
-        public Int16 Feeling
+        public Int16? Feeling
         {
             get 
             {
@@ -38,14 +33,17 @@ namespace Sinoptik.ViewModel
             }
             set
             {
-                if (!Validation(value))
-                    throw new ArgumentException("Значение вне пределов допустимого диапозона (1-6)"); //?? или сделать это в методе с проверкой?
+                if (Validation(value) == false)
+                    throw new ArgumentException("Значение вне пределов допустимого диапозона (0-6)"); //?? или сделать это в методе с проверкой?
                 else
-                SANTest.SANFeeling = value;
+                {
+                    SANTest.SANFeeling = value;
+                }
+
             }
         }
 
-        public Int16 PassivActiv
+        public Int16? PassivActiv
         {
             get 
             {
@@ -53,14 +51,14 @@ namespace Sinoptik.ViewModel
             }
             set
             {
-                if (!Validation(value))
-                    throw new ArgumentException("Значение вне пределов допустимого диапозона (1-6)");
+                if (Validation(value) == false)
+                    throw new ArgumentException("Значение вне пределов допустимого диапозона (0-6)");
                 else
                     SANTest.SANPassivActiv = value;
             }
         }
 
-        public Int16 Mood 
+        public Int16? Mood 
         {
             get 
             {
@@ -68,14 +66,14 @@ namespace Sinoptik.ViewModel
             }
             set
             {
-                if (!Validation(value))
-                    throw new ArgumentException("Значение вне пределов допустимого диапозона (1-6)");
+                if (Validation(value) == false)
+                    throw new ArgumentException("Значение вне пределов допустимого диапозона (0-6)");
                 else
                     SANTest.SANMood = value;
             }
         }
 
-        public Int16 FullForceExhausted
+        public Int16? FullForceExhausted
         {
             get 
             {
@@ -83,14 +81,14 @@ namespace Sinoptik.ViewModel
             }
             set
             {
-                if (!Validation(value))
-                    throw new ArgumentException("Значение вне пределов допустимого диапозона (1-6)");
+                if (Validation(value) == false)
+                    throw new ArgumentException("Значение вне пределов допустимого диапозона (0-6)");
                 else
                     SANTest.SANFullForceExhausted = value;
             }
         }
 
-        public Int16 RestedTired
+        public Int16? RestedTired
         {
             get 
             {
@@ -98,14 +96,14 @@ namespace Sinoptik.ViewModel
             }
             set
             {
-                if (!Validation(value))
-                    throw new ArgumentException("Значение вне пределов допустимого диапозона (1-6)");
+                if (Validation(value) == false)
+                    throw new ArgumentException("Значение вне пределов допустимого диапозона (0-6)");
                 else
                     SANTest.SANRestedTired = value;
             }
         }
 
-        public Int16 SlepyHorny
+        public Int16? SlepyHorny
         {
             get 
             {
@@ -114,14 +112,14 @@ namespace Sinoptik.ViewModel
 
             set
             {
-                if (!Validation(value))
-                    throw new ArgumentException("Значение вне пределов допустимого диапозона (1-6)");
+                if (Validation(value) == false)
+                    throw new ArgumentException("Значение вне пределов допустимого диапозона (0-6)");
                 else
                     SANTest.SANSlepyHorny = value;
             }
         }
 
-        public Int16 DesireToWork
+        public Int16? DesireToWork
         {
             get
             {
@@ -130,16 +128,34 @@ namespace Sinoptik.ViewModel
 
             set
             {
-                if (!Validation(value))
-                    throw new ArgumentException("Значение вне пределов допустимого диапозона (1-6)");
+                if (Validation(value)  == false)
+                    throw new ArgumentException("Значение вне пределов допустимого диапозона (0-6)");
                 else
                     SANTest.SANDesireToWork = value;
             }
         }
 
-
-        private Boolean Validation(Int16 value)
+        public Int16? CalmHorny
         {
+            get
+            {
+                return SANTest.SANCalmHorny;
+            }
+
+            set
+            {
+                if (Validation(value) == false)
+                    throw new ArgumentException("Значение вне пределов допустимого диапозона (0-6)");
+                else
+                    SANTest.SANCalmHorny = value;
+            }
+        }
+
+
+        private Boolean? Validation(Int16? value)
+        {
+            if (value == null)
+                return null;
             if (value > 6 || value < 1)
                 return false;
             else

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Sinoptik.Model;
 
 namespace Sinoptik.ViewModel
@@ -39,7 +35,7 @@ namespace Sinoptik.ViewModel
             set
             {
                 if (!Validation(value))
-                    throw new ArgumentException("Значение вне пределов допустимого диапозона (1-10)");
+                    throw new ArgumentException("Значение вне пределов допустимого диапозона (0-5)");
                 else
                 SubjParams.Hedache = value;
             }
@@ -55,7 +51,7 @@ namespace Sinoptik.ViewModel
             set
             {
                 if (!Validation(value))
-                    throw new ArgumentException("Значение вне пределов допустимого диапозона (1-10)");
+                    throw new ArgumentException("Значение вне пределов допустимого диапозона (0-5)");
                 else
                 SubjParams.Hedache = value;
             }
@@ -70,7 +66,7 @@ namespace Sinoptik.ViewModel
             set
             {
                 if (!Validation(value))
-                    throw new ArgumentException("Значение вне пределов допустимого диапозона (1-10)");
+                    throw new ArgumentException("Значение вне пределов допустимого диапозона (0-5)");
                 else
                 SubjParams.HeartPain = value;
             }

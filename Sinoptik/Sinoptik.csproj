@@ -46,6 +46,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -68,8 +69,17 @@
     <Compile Include="Migrations\201510080955234_1.Designer.cs">
       <DependentUpon>201510080955234_1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201511050740315_AddBreathRateIntoObjParams.cs" />
+    <Compile Include="Migrations\201511050740315_AddBreathRateIntoObjParams.Designer.cs">
+      <DependentUpon>201511050740315_AddBreathRateIntoObjParams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511051011313_AddCalmHornyIntoSANtest.cs" />
+    <Compile Include="Migrations\201511051011313_AddCalmHornyIntoSANtest.Designer.cs">
+      <DependentUpon>201511051011313_AddCalmHornyIntoSANtest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ViewModel\XBodyTempVM.cs" />
+    <Compile Include="ViewModel\XBreathRateVM.cs" />
     <Compile Include="ViewModel\XDiastolicBloodPressureVM.cs" />
     <Compile Include="ViewModel\XParameterBase.cs" />
     <Compile Include="ViewModel\XClientVM.cs" />
@@ -84,6 +94,9 @@
     <Compile Include="XRadioButtonStackControl.xaml.cs">
       <DependentUpon>XRadioButtonStackControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="XRadioButtonStackControlForPain.xaml.cs">
+      <DependentUpon>XRadioButtonStackControlForPain.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -97,6 +110,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="XRadioButtonStackControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="XRadioButtonStackControlForPain.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -126,8 +143,14 @@
     <EmbeddedResource Include="Migrations\201510080955234_1.resx">
       <DependentUpon>201510080955234_1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511050740315_AddBreathRateIntoObjParams.resx">
+      <DependentUpon>201511050740315_AddBreathRateIntoObjParams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511051011313_AddCalmHornyIntoSANtest.resx">
+      <DependentUpon>201511051011313_AddCalmHornyIntoSANtest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -143,6 +166,9 @@
     </None>
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resources\painScale.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

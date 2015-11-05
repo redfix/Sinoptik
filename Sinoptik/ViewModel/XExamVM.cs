@@ -15,6 +15,7 @@ namespace Sinoptik.ViewModel
         readonly XBodyTempVM _bodyTemp;
         readonly XSistolicBloodPressureVM _sBP;
         readonly XDiastolicBloodPressureVM _dBP;
+        readonly XBreathRateVM _breathRate;
         readonly XSANVM _san;
         readonly XWeatherVM _weather;
         readonly XSubjectivParametersVM _subjParams;
@@ -25,25 +26,29 @@ namespace Sinoptik.ViewModel
         {
             _exam = exam;
             _heartRate = new XHeartRateVM();
-            _heartRate.Value = exam.ObjParams.HeartRate;
+           // _heartRate.Value = exam.ObjParams.HeartRate;
             _san = new XSANVM(exam.SANTest);
             _subjParams = new XSubjectivParametersVM(exam.SubjParams);
             _weather = new XWeatherVM(exam.Weather);
             _bodyTemp = new XBodyTempVM(exam.ObjParams.BodyTemp);
+            //_bodyTemp.Value = exam.ObjParams.BodyTemp;
             _sBP = new XSistolicBloodPressureVM(exam.ObjParams.SistolicBloodPressure);
+            //_sBP.Value = exam.ObjParams.SistolicBloodPressure;
             _dBP = new XDiastolicBloodPressureVM(exam.ObjParams.DiastolicBloodPressure);
+            //_dBP.Value = exam.ObjParams.DiastolicBloodPressure;
+            _breathRate = new XBreathRateVM(exam.ObjParams.BreathRate);
         }
 
-        public XExamVM()
+        public XExamVM() : this(new XExam())
         {
-            _exam = new XExam();
-            _heartRate = new XHeartRateVM();
-            _san = new XSANVM(_exam.SANTest);
-            _subjParams = new XSubjectivParametersVM(_exam.SubjParams);
-            _bodyTemp = new XBodyTempVM();
-            _sBP = new XSistolicBloodPressureVM();
-            _dBP = new XDiastolicBloodPressureVM();
-            _weather = new XWeatherVM(_exam.Weather);
+            //_exam = new XExam();
+            //_heartRate = new XHeartRateVM();
+            //_san = new XSANVM(_exam.SANTest);
+            //_subjParams = new XSubjectivParametersVM(_exam.SubjParams);
+            //_bodyTemp = new XBodyTempVM();
+            //_sBP = new XSistolicBloodPressureVM();
+            //_dBP = new XDiastolicBloodPressureVM();
+            //_weather = new XWeatherVM(_exam.Weather);
         }
 
         internal XExam Exam
@@ -106,7 +111,7 @@ namespace Sinoptik.ViewModel
             }
         }
 
-        internal Int16 SBP
+        public Int16 SBP
         {
             get
             {
@@ -118,7 +123,7 @@ namespace Sinoptik.ViewModel
             }
         }
 
-        internal Int16 DBP
+        public Int16 DBP
         {
             get
             {
@@ -130,6 +135,20 @@ namespace Sinoptik.ViewModel
             }
         }
 
+
+        public Int16 BreathRate
+        {
+            get
+            {
+                return _breathRate.Value;
+            }
+
+            set 
+            {
+                _exam.ObjParams.BreathRate = _breathRate.Value = value;
+            }
+        }
+
         internal XSubjectivParametersVM SubjParams
         {
             get
@@ -137,5 +156,6 @@ namespace Sinoptik.ViewModel
                 return _subjParams;
             }
         }
+
     }
 }
