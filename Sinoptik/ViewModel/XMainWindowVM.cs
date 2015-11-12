@@ -20,11 +20,12 @@ namespace Sinoptik.ViewModel
             _context = new XDBContext();
 
             var v = from cl in _context.Clients
-                    where cl.Id == 1
+                    where cl.Id == 2
                     select cl;
 
-            foreach (XClient c in v)
-                _client = new XClientVM(c);
+            
+            foreach (var va in v)
+                _client = new XClientVM(va);
 
             //  _act = new Action(SaveChanges);
         }
