@@ -2,6 +2,8 @@
 using System.Windows;
 using System.Windows.Controls;
 
+// "painScale.png";
+
 namespace Sinoptik
 {
     /// <summary>

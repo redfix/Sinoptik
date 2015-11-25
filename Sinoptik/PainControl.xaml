@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="Sinoptik.PainControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Sinoptik"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="450">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Image Grid.Row="0" Source="..\Resources\painScale.png"></Image>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Orientation="Horizontal">
+                    <RadioButton x:Name = "PainRadio0" HorizontalAlignment="Center" VerticalAlignment="Center"> </RadioButton>
+                    <RadioButton x:Name = "PainRadio1" HorizontalAlignment="Center" VerticalAlignment="Center"></RadioButton>
+                    <RadioButton x:Name = "PainRadio2" HorizontalAlignment="Center" VerticalAlignment="Center"></RadioButton>
+                    <RadioButton x:Name = "PainRadio3" HorizontalAlignment="Center" VerticalAlignment="Center"></RadioButton>
+                    <RadioButton x:Name = "PainRadio4" HorizontalAlignment="Center" VerticalAlignment="Center"></RadioButton>
+                    <RadioButton x:Name = "PainRadio5" HorizontalAlignment="Center" VerticalAlignment="Center"></RadioButton>
+                    <RadioButton x:Name = "PainRadio6" HorizontalAlignment="Center" VerticalAlignment="Center"></RadioButton>
+                    <RadioButton x:Name = "PainRadio7" HorizontalAlignment="Center" VerticalAlignment="Center"></RadioButton>
+                    <RadioButton x:Name = "PainRadio8" HorizontalAlignment="Center" VerticalAlignment="Center"></RadioButton>
+                    <RadioButton x:Name = "PainRadio9" HorizontalAlignment="Center" VerticalAlignment="Center"> </RadioButton>
+                    <RadioButton x:Name = "PainRadio10" HorizontalAlignment="Center" VerticalAlignment="Center"> </RadioButton>
+                </StackPanel>
+                <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal" >
+                    <Label Padding="5,0,5,0" FontSize="10">0</Label>
+                    <Label Padding="5,0,5,0" FontSize="10">1</Label>
+                    <Label Padding="5,0,5,0" FontSize="10">2</Label>
+                    <Label Padding="6,0,6,0" FontSize="10">3</Label>
+                    <Label Padding="5,0,5,0" FontSize="10">4</Label>
+                    <Label Padding="6,0,6,0" FontSize="10">5</Label>
+                    <Label Padding="5,0,5,0" FontSize="10">6</Label>
+                    <Label Padding="6,0,6,0" FontSize="10">7</Label>
+                    <Label Padding="6,0,6,0" FontSize="10">8</Label>
+                    <Label Padding="6,0,6,0" FontSize="10">9</Label>
+                    <Label Padding="6,0,6,0" FontSize="10">10</Label>
+                </StackPanel>
+            </Grid>
+        </Grid>
+            
+    </Grid>
+</UserControl>

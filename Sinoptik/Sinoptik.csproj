@@ -78,6 +78,9 @@
       <DependentUpon>201511051011313_AddCalmHornyIntoSANtest.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="PainControl.xaml.cs">
+      <DependentUpon>PainControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\XBodyTempVM.cs" />
     <Compile Include="ViewModel\XBreathRateVM.cs" />
     <Compile Include="ViewModel\XDiastolicBloodPressureVM.cs" />
@@ -109,6 +112,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PainControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="XRadioButtonStackControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -166,8 +173,9 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <Resource Include="Resources\painScale.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
