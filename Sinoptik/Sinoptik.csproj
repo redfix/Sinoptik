@@ -81,6 +81,11 @@
     <Compile Include="PainControl.xaml.cs">
       <DependentUpon>PainControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Resources\painpic.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>painpic.resx</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\XBodyTempVM.cs" />
     <Compile Include="ViewModel\XBreathRateVM.cs" />
     <Compile Include="ViewModel\XDiastolicBloodPressureVM.cs" />
@@ -94,11 +99,11 @@
     <Compile Include="ViewModel\XSubjectivParametersVM.cs" />
     <Compile Include="ViewModel\XViewModelBase.cs" />
     <Compile Include="ViewModel\XWeatherVM.cs" />
+    <Compile Include="XPainStack.xaml.cs">
+      <DependentUpon>XPainStack.xaml</DependentUpon>
+    </Compile>
     <Compile Include="XRadioButtonStackControl.xaml.cs">
       <DependentUpon>XRadioButtonStackControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="XRadioButtonStackControlForPain.xaml.cs">
-      <DependentUpon>XRadioButtonStackControlForPain.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -116,11 +121,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="XRadioButtonStackControl.xaml">
+    <Page Include="XPainStack.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="XRadioButtonStackControlForPain.xaml">
+    <Page Include="XRadioButtonStackControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -161,6 +166,10 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\painpic.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>painpic.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -173,9 +182,8 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Resource Include="Resources\painScale.png" />
+    <None Include="Resources\painScale.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
