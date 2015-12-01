@@ -81,11 +81,11 @@
     <Compile Include="PainControl.xaml.cs">
       <DependentUpon>PainControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Resources\painpic.Designer.cs">
+    <Resource Include="Resources\painpic.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>painpic.resx</DependentUpon>
-    </Compile>
+    </Resource>
     <Compile Include="ViewModel\XBodyTempVM.cs" />
     <Compile Include="ViewModel\XBreathRateVM.cs" />
     <Compile Include="ViewModel\XDiastolicBloodPressureVM.cs" />
@@ -166,10 +166,10 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\painpic.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+    <Resource Include="Resources\painpic.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>painpic.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    </Resource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -183,7 +183,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\painScale.png" />
+    <Resource Include="Resources\painScale.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

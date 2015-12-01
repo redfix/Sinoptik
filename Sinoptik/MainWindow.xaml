@@ -107,62 +107,14 @@
                     </Grid>
 
                     <Grid Grid.Column="2">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="1"></RowDefinition>
-                            <RowDefinition Height="350"></RowDefinition>
-                            <RowDefinition Height="1"></RowDefinition>
-                        </Grid.RowDefinitions>
-
-
-                        <!--ComboBox x:Name="comboBox0" Grid.Row="0" Grid.Column ="2" Width="219" HorizontalAlignment="Center" VerticalAlignment="Center">
-                            <ComboBoxItem>"Боль отсутствует"</ComboBoxItem>
-                            <ComboBoxItem>"Умеренная боль/боль мешает деятельности"</ComboBoxItem>
-                            <ComboBoxItem>"Умеренная боль/боль мешает концентрироваться"</ComboBoxItem>
-                            <ComboBoxItem>"Сильная боль/мешает основным потребностям"</ComboBoxItem>
-                            <ComboBoxItem>"Невыносимая боль/необходим постельный режим"</ComboBoxItem>
-                        </>
-
-                        <ComboBox x:Name="comboBox1" Grid.Row="1" Grid.Column ="2" Width="219" HorizontalAlignment="Center" VerticalAlignment="Center">
-                            <ComboBoxItem>"Боль отсутствует"</ComboBoxItem>
-                            <ComboBoxItem>"Умеренная боль/боль мешает деятельности"</ComboBoxItem>
-                            <ComboBoxItem>"Умеренная боль/боль мешает концентрироваться"</ComboBoxItem>
-                            <ComboBoxItem>"Сильная боль/мешает основным потребностям"</ComboBoxItem>
-                            <ComboBoxItem>"Невыносимая боль/необходим постельный режим"</ComboBoxItem>
-                        </ComboBox>
-
-                        <ComboBox x:Name="comboBox2" Grid.Row="2" Grid.Column ="2" Width="219" HorizontalAlignment="Center" VerticalAlignment="Center">
-                            <ComboBoxItem>"Боль отсутствует"</ComboBoxItem>
-                            <ComboBoxItem>"Умеренная боль/боль мешает деятельности"</ComboBoxItem>
-                            <ComboBoxItem>"Умеренная боль/боль мешает концентрироваться"</ComboBoxItem>
-                            <ComboBoxItem>"Сильная боль/мешает основным потребностям"</ComboBoxItem>
-                            <ComboBoxItem>"Невыносимая боль/необходим постельный режим"</ComboBoxItem>
-                        </ComboBox-->
-
                         <Grid Grid.Row="1">
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="200" ></RowDefinition>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition></RowDefinition>
-
+                                <RowDefinition Height="Auto" ></RowDefinition>
                             </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="120"></ColumnDefinition>
-                                <ColumnDefinition Width="300"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
+                          <local:PainControl x:Name="one" Grid.Column="1" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Right"></local:PainControl>
 
-                            <Label Grid.Row="1" Grid.Column="0" Content="Головная боль:" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
-                            <local:XRadioButtonStackControlForPain x:Name="Headache" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right"></local:XRadioButtonStackControlForPain>
-                            <Label Grid.Row="2" Grid.Column="0" Content="Боль в суставах:" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
-                            <local:XRadioButtonStackControlForPain x:Name="RheumaticPain" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Right"></local:XRadioButtonStackControlForPain>
-                            <Label Grid.Row="3" Grid.Column="0" Content="Боль в сердце:" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
-                            <local:XRadioButtonStackControlForPain x:Name="HeartPain" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Right"></local:XRadioButtonStackControlForPain>
-
-                            <!--Image Source="Resources/painScale.png" Width="auto" Height="auto" Grid.Column="1"></-->
                         </Grid>
                     </Grid>
-
                 </Grid>
             </TabItem>
             <TabItem Header="Тренды">

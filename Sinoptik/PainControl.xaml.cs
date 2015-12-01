@@ -23,26 +23,9 @@ namespace Sinoptik
         public PainControl()
         {
             InitializeComponent();
-        }
-
-        public int GetChoiceResult()
-        {
-          int result;
-          foreach (RadioButton el in this.Stack1.Children)
-            if ((el.IsChecked.HasValue) ? el.IsChecked.Value : false)
-              if (el.Name.Length == 10)
-                if (Int32.TryParse(el.Name.Substring(9, 1), out result))
-                  return result;
-                else
-                  return -1;
-              else
-                if (Int32.TryParse(el.Name.Substring(9, 2), out result))
-                  return result;
-                else
-                  return -1;
-            else
-              continue;
-          return -1;
+            this.HeadPainStack.Header.Content = "Головная боль";
+            this.HeartPainStack.Header.Content = "Боль в сердце";
+            this.BonePainStack.Header.Content = "Боль в суставах";
         }
     }
 }
