@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Sinoptik.View"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="450">
-  <Grid Background="#FFE5E5E5">
+  <Grid Background="AliceBlue">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition></RowDefinition>

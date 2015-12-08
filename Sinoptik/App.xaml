@@ -4,6 +4,9 @@
              xmlns:local="clr-namespace:Sinoptik"
              >
     <Application.Resources>
-         
+        
+
+        
     </Application.Resources>
+    
 </Application>

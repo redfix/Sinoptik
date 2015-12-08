@@ -5,7 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sinoptik.View"
         mc:Ignorable="d"
+        
         Title="Sinoptik v 1.0" WindowState="Maximized" MinWidth="1200" MinHeight="700" d:DesignWidth="1138.5" d:DesignHeight="1025.95" Closing="WindowClosing">
+    <Window.Resources>
+        <Style x:Name="dw" x:Key="XStyleToTab" TargetType="TabItem">
+            <Setter Property="Background" Value="LightBlue" />
+            <Setter Property="Width" Value="125"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="BorderBrush" Value="AliceBlue"/>
+        </Style>
+    </Window.Resources>
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="200"></RowDefinition>
@@ -29,9 +39,9 @@
         </Grid>
 
 
-        <TabControl x:Name="tabControl" Grid.Row="1"  Margin="8"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
-            <TabItem Header="Ввод данных">
-                <Grid Background="#FFE5E5E5" Margin="0,28,0,-7">
+        <TabControl x:Name="tabControl" Grid.Row="1"  Margin="8"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="AliceBlue" >
+            <TabItem Header="Ввод данных" Style="{StaticResource XStyleToTab}">
+                <Grid  Margin="0,28,0,-7">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="188*"></ColumnDefinition>
                         <ColumnDefinition Width="450"></ColumnDefinition>
@@ -151,14 +161,14 @@
                   
                 </Grid>
             </TabItem>
-            <TabItem Header="Тренды">
-                <Grid Background="#FFE5E5E5"/>
+            <TabItem Header="Тренды" Style="{StaticResource XStyleToTab}" HorizontalAlignment="Right" Margin="0">
+               
             </TabItem>
-            <TabItem Header="Краткая сводка">
-                <Grid Background="#FFE5E5E6"/>
+            <TabItem Header="Краткая сводка" Style="{StaticResource XStyleToTab}">
+                
             </TabItem>
-            <TabItem Header="Прогноз">
-                <Grid Background="#FFE5E5E5"/>
+            <TabItem Header="Прогноз" Style="{StaticResource XStyleToTab}">
+                
             </TabItem>
         </TabControl>
 

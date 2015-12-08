@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Sinoptik"
              mc:Ignorable="d" 
              d:DesignHeight="32" d:DesignWidth="120">
-  <Grid x:Name="Grid" Background="#FFE5E5E5">
+  <Grid x:Name="Grid" Background="AliceBlue">
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
