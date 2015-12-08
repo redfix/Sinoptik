@@ -4,7 +4,7 @@ using System.Windows.Controls;
 
 // "painScale.png";
 
-namespace Sinoptik
+namespace Sinoptik.View
 {
     /// <summary>
     /// Логика взаимодействия для XRadioButtonStackControl.xaml

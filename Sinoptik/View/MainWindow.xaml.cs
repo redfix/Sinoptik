@@ -2,7 +2,7 @@
 using System.Windows;
 using Sinoptik.ViewModel;
 
-namespace Sinoptik
+namespace Sinoptik.View
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

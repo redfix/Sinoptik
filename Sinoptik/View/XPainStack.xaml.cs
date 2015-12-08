@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Controls;
 
-namespace Sinoptik
+namespace Sinoptik.View
 {
     /// <summary>
     /// Interaction logic for XPainStack.xaml
