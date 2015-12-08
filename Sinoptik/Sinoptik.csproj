@@ -95,6 +95,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\XPlot.cs" />
     <Compile Include="StartApp.cs" />
     <Compile Include="Migrations\201510080955234_1.cs" />
     <Compile Include="Migrations\201510080955234_1.Designer.cs">
@@ -130,8 +131,14 @@
     <Compile Include="ViewModel\XSubjectivParametersVM.cs" />
     <Compile Include="ViewModel\XViewModelBase.cs" />
     <Compile Include="ViewModel\XWeatherVM.cs" />
+    <Compile Include="View\UserControl1.xaml.cs">
+      <DependentUpon>UserControl1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\XPainStack.xaml.cs">
       <DependentUpon>XPainStack.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\XPlotControl.xaml.cs">
+      <DependentUpon>XPlotControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\XRadioButtonStackControl.xaml.cs">
       <DependentUpon>XRadioButtonStackControl.xaml</DependentUpon>
@@ -152,7 +159,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\UserControl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\XPainStack.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\XPlotControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
