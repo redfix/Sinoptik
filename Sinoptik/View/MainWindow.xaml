@@ -14,6 +14,27 @@
             <Setter Property="Height" Value="40"/>
             <Setter Property="BorderBrush" Value="AliceBlue"/>
         </Style>
+
+        <Style x:Name="XColors" x:Key="XStyleToButton" TargetType="Button" >
+            <Setter Property="Background" Value="LightSteelBlue" />
+            <Setter Property="BorderThickness" Value="0"></Setter>
+            <Setter Property="BorderBrush" Value="AliceBlue"/>
+            <Setter Property="Height" Value="30"></Setter>
+            <Setter Property="Width" Value="100"></Setter>
+        </Style>
+
+        <Style x:Key="DataGridStyle" TargetType="DataGrid">
+            <Setter Property="IsSynchronizedWithCurrentItem" Value="True"></Setter>
+            <Setter Property="AutoGenerateColumns" Value="False"></Setter>
+            <Setter Property="Background" Value="AliceBlue"></Setter>
+            <Setter Property="BorderBrush" Value="LightBlue"></Setter>
+            <Setter Property="RowBackground" Value="AliceBlue"></Setter>
+            <Setter Property="VerticalGridLinesBrush" Value="LightBlue"></Setter>
+            <Setter Property="HorizontalGridLinesBrush" Value="LightBlue"></Setter>
+            <Setter Property="CellStyle" Value="{DynamicResource CellSt}"></Setter>
+            <Setter Property="CanUserSortColumns" Value="False"></Setter>
+        </Style>
+        
     </Window.Resources>
     
     <Grid>
@@ -56,51 +77,50 @@
                             <RowDefinition></RowDefinition>
                         </Grid.RowDefinitions>
 
-            <Grid Grid.Row="0">
-              <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-              </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
 
-              <Label  x:Name="GridLabel00" Grid.Row="0" Content="ЧСС, уд/мин" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="15" Margin="4,4,4,4"></Label>
-              <TextBox x:Name="HR"     Text="{Binding HeartRate}"  Grid.Row="1" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Margin="4,4,4,4" VerticalAlignment="Top" Width="66"/>
-              
-            </Grid>
+                            <Label  x:Name="GridLabel00" Grid.Row="0" Content="ЧСС, уд/мин" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="15" Margin="4,4,4,4"></Label>
+                            <TextBox x:Name="HR"     Text="{Binding HeartRate}"  Grid.Row="1" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Margin="4,4,4,4" VerticalAlignment="Top" Width="66"/>
 
-            <Grid Grid.Row="1">
-              <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-              </Grid.RowDefinitions>
+                        </Grid>
 
-              <TextBox x:Name="SAD"    Text="{Binding SBP}" Grid.Row="1" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Margin="4,4,4,4" VerticalAlignment="Top" Width="66"/>
-              <Label  x:Name="GridLabel01" Grid.Row="0" Content="Систолическое АД" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="15" Margin="4,4,4,4"></Label>
+                        <Grid Grid.Row="1">
+                          <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                          </Grid.RowDefinitions>
 
-            </Grid>
+                          <TextBox x:Name="SAD"    Text="{Binding SBP}" Grid.Row="1" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Margin="4,4,4,4" VerticalAlignment="Top" Width="66"/>
+                          <Label  x:Name="GridLabel01" Grid.Row="0" Content="Систолическое АД" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="15" Margin="4,4,4,4"></Label>
 
-            <Grid Grid.Row="2">
-              <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-              </Grid.RowDefinitions>
+                        </Grid>
 
-              <TextBox x:Name="DAD"    Text="{Binding DBP}"        Grid.Row="1" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Margin="4,4,4,4" VerticalAlignment="Top" Width="66"/>
-              <Label  x:Name="GridLabel02" Grid.Row="0" Content="Диастолическое АД" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="15" Margin="4,4,4,4"></Label>
+                        <Grid Grid.Row="2">
+                          <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                          </Grid.RowDefinitions>
 
-            </Grid>
+                          <TextBox x:Name="DAD"    Text="{Binding DBP}"        Grid.Row="1" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Margin="4,4,4,4" VerticalAlignment="Top" Width="66"/>
+                          <Label  x:Name="GridLabel02" Grid.Row="0" Content="Диастолическое АД" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="15" Margin="4,4,4,4"></Label>
 
-            <Grid Grid.Row="3">
-              <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-              </Grid.RowDefinitions>
+                        </Grid>
 
-              <TextBlock  x:Name="GridLabel03" TextWrapping="WrapWithOverflow" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="15" >Частота дыхания, вдох/мин</TextBlock>
-              <TextBox x:Name="Breath" Text="{Binding BreathRate}" Grid.Row="1" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Margin="4,4,4,4" VerticalAlignment="Top" Width="66"/>
+                        <Grid Grid.Row="3">
+                          <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                          </Grid.RowDefinitions>
 
-            </Grid>
+                          <TextBlock  x:Name="GridLabel03" TextWrapping="WrapWithOverflow" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="15" >Частота дыхания, вдох/мин</TextBlock>
+                          <TextBox x:Name="Breath" Text="{Binding BreathRate}" Grid.Row="1" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Margin="4,4,4,4" VerticalAlignment="Top" Width="66"/>
 
-            
+                        </Grid>
+           
                     </Grid>
 
                     <Grid Grid.Column="1" Margin="0,0,0,25">
@@ -120,37 +140,35 @@
                             <ColumnDefinition Width="150"></ColumnDefinition>
                             <ColumnDefinition Width="150"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-            <TextBlock  x:Name="GridLabel200" Grid.Column ="0" Grid.Row="0" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment = "Center" FontSize="15" Margin="5,0,0,0">Самочувствие хорошее</TextBlock>
-            <TextBlock  x:Name="GridLabel220" Grid.Column ="2" Grid.Row="0" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment = "Center" FontSize="15" Margin="5,0,0,0">Самочувствие плохое</TextBlock>
-            <TextBlock  x:Name="GridLabel201" Grid.Column ="0" Grid.Row="1" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment = "Center" FontSize="15" Margin="5,0,0,0">Полный сил</TextBlock>
-            <TextBlock  x:Name="GridLabel221" Grid.Column ="2" Grid.Row="1" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment = "Center" FontSize="15" Margin="5,0,0,0">Обессиленный</TextBlock>
-            <TextBlock  x:Name="GridLabel202" Grid.Column ="0" Grid.Row="2" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment = "Center" FontSize="15" Margin="5,0,0,0">Отдохнувший</TextBlock>
-            <TextBlock  x:Name="GridLabel222" Grid.Column ="2" Grid.Row="2" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment = "Center" FontSize="15" Margin="5,0,0,0">Усталый</TextBlock>
-            <TextBlock  x:Name="GridLabel203" Grid.Column ="0" Grid.Row="3" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment = "Center" FontSize="15" Margin="5,0,0,0">Пассивный</TextBlock>
-            <TextBlock  x:Name="GridLabel223" Grid.Column ="2" Grid.Row="3" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment = "Center" FontSize="15" Margin="5,0,0,0">Активный</TextBlock>
-            <TextBlock  x:Name="GridLabel204" Grid.Column ="0" Grid.Row="4" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment = "Center" FontSize="15" Margin="5,0,0,0">Сонливый</TextBlock>
-            <TextBlock  x:Name="GridLabel224" Grid.Column ="2" Grid.Row="4" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment = "Center" FontSize="15" Margin="5,0,0,0">Возбужденный</TextBlock>
-            <TextBlock  x:Name="GridLabel205" Grid.Column ="0" Grid.Row="5" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment = "Center" FontSize="15" Margin="5,0,0,0">Желание отдохнуть</TextBlock>
-            <TextBlock  x:Name="GridLabel225" Grid.Column ="2" Grid.Row="5" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment = "Center" FontSize="15" Margin="5,0,0,0">Желание работать</TextBlock>
-            <TextBlock  x:Name="GridLabel206" Grid.Column ="0" Grid.Row="6" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment = "Center" FontSize="15" Margin="5,0,0,0">Хорошее настроение</TextBlock>
-            <TextBlock  x:Name="GridLabel226" Grid.Column ="2" Grid.Row="6" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment = "Center" FontSize="15" Margin="5,0,0,0">Плохое настроение</TextBlock>
-            <TextBlock  x:Name="GridLabel207" Grid.Column ="0" Grid.Row="7" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment = "Center" FontSize="15" Margin="5,0,0,0">Спокойный</TextBlock>
-            <TextBlock  x:Name="GridLabel227" Grid.Column ="2" Grid.Row="7" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment = "Center" FontSize="15" Margin="5,0,0,0">Озабоченный</TextBlock>
-            <TextBlock  x:Name="GridLabel208" Grid.Column ="0" Grid.Row="8" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment = "Center" FontSize="15" Margin="5,0,0,0">Оптимистичный</TextBlock>
-            <TextBlock  x:Name="GridLabel228" Grid.Column ="2" Grid.Row="8" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment ="Center" FontSize="15" Margin="5,0,0,0">Пессимистичный</TextBlock>
+                            <TextBlock  x:Name="GridLabel200" Grid.Column ="0" Grid.Row="0" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment = "Center" FontSize="15" Margin="5,0,0,0">Самочувствие хорошее</TextBlock>
+                            <TextBlock  x:Name="GridLabel220" Grid.Column ="2" Grid.Row="0" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment = "Center" FontSize="15" Margin="5,0,0,0">Самочувствие плохое</TextBlock>
+                            <TextBlock  x:Name="GridLabel201" Grid.Column ="0" Grid.Row="1" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment = "Center" FontSize="15" Margin="5,0,0,0">Полный сил</TextBlock>
+                            <TextBlock  x:Name="GridLabel221" Grid.Column ="2" Grid.Row="1" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment = "Center" FontSize="15" Margin="5,0,0,0">Обессиленный</TextBlock>
+                            <TextBlock  x:Name="GridLabel202" Grid.Column ="0" Grid.Row="2" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment = "Center" FontSize="15" Margin="5,0,0,0">Отдохнувший</TextBlock>
+                            <TextBlock  x:Name="GridLabel222" Grid.Column ="2" Grid.Row="2" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment = "Center" FontSize="15" Margin="5,0,0,0">Усталый</TextBlock>
+                            <TextBlock  x:Name="GridLabel203" Grid.Column ="0" Grid.Row="3" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment = "Center" FontSize="15" Margin="5,0,0,0">Пассивный</TextBlock>
+                            <TextBlock  x:Name="GridLabel223" Grid.Column ="2" Grid.Row="3" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment = "Center" FontSize="15" Margin="5,0,0,0">Активный</TextBlock>
+                            <TextBlock  x:Name="GridLabel204" Grid.Column ="0" Grid.Row="4" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment = "Center" FontSize="15" Margin="5,0,0,0">Сонливый</TextBlock>
+                            <TextBlock  x:Name="GridLabel224" Grid.Column ="2" Grid.Row="4" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment = "Center" FontSize="15" Margin="5,0,0,0">Возбужденный</TextBlock>
+                            <TextBlock  x:Name="GridLabel205" Grid.Column ="0" Grid.Row="5" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment = "Center" FontSize="15" Margin="5,0,0,0">Желание отдохнуть</TextBlock>
+                            <TextBlock  x:Name="GridLabel225" Grid.Column ="2" Grid.Row="5" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment = "Center" FontSize="15" Margin="5,0,0,0">Желание работать</TextBlock>
+                            <TextBlock  x:Name="GridLabel206" Grid.Column ="0" Grid.Row="6" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment = "Center" FontSize="15" Margin="5,0,0,0">Хорошее настроение</TextBlock>
+                            <TextBlock  x:Name="GridLabel226" Grid.Column ="2" Grid.Row="6" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment = "Center" FontSize="15" Margin="5,0,0,0">Плохое настроение</TextBlock>
+                            <TextBlock  x:Name="GridLabel207" Grid.Column ="0" Grid.Row="7" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment = "Center" FontSize="15" Margin="5,0,0,0">Спокойный</TextBlock>
+                            <TextBlock  x:Name="GridLabel227" Grid.Column ="2" Grid.Row="7" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment = "Center" FontSize="15" Margin="5,0,0,0">Озабоченный</TextBlock>
+                            <TextBlock  x:Name="GridLabel208" Grid.Column ="0" Grid.Row="8" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment = "Center" FontSize="15" Margin="5,0,0,0">Оптимистичный</TextBlock>
+                            <TextBlock  x:Name="GridLabel228" Grid.Column ="2" Grid.Row="8" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalAlignment ="Center" FontSize="15" Margin="5,0,0,0">Пессимистичный</TextBlock>
                         
-            <local:XRadioButtonStackControl x:Name="RadioButtonGroupFeeling" Grid.Column="1" Grid.Row="0"/>
-            <local:XRadioButtonStackControl x:Name="RadioButtonGroupFullForceExhausted" Grid.Column="1" Grid.Row="1"/>
-            <local:XRadioButtonStackControl x:Name="RadioButtonGroupRestedTired" Grid.Column="1" Grid.Row="2"/>
-            <local:XRadioButtonStackControl x:Name="RadioButtonGroupPassivActiv" Grid.Column="1" Grid.Row="3"/>
-            <local:XRadioButtonStackControl x:Name="RadioButtonGroupSlepyHorny" Grid.Column="1" Grid.Row="4"/>
-            <local:XRadioButtonStackControl x:Name="RadioButtonGroupDesireToWork" Grid.Column="1" Grid.Row="5"/>
-            <local:XRadioButtonStackControl x:Name="RadioButtonGroupMoody" Grid.Column="1" Grid.Row="6"/>
-            <local:XRadioButtonStackControl x:Name="RadioButtonGroupCalmHorny" Grid.Column="1" Grid.Row="7"/>
-            <local:XRadioButtonStackControl x:Name="RadioButtonGroup8" Grid.Column="1" Grid.Row="8"/>
-
-            
-       </Grid>
+                            <local:XRadioButtonStackControl x:Name="RadioButtonGroupFeeling" Grid.Column="1" Grid.Row="0"/>
+                            <local:XRadioButtonStackControl x:Name="RadioButtonGroupFullForceExhausted" Grid.Column="1" Grid.Row="1"/>
+                            <local:XRadioButtonStackControl x:Name="RadioButtonGroupRestedTired" Grid.Column="1" Grid.Row="2"/>
+                            <local:XRadioButtonStackControl x:Name="RadioButtonGroupPassivActiv" Grid.Column="1" Grid.Row="3"/>
+                            <local:XRadioButtonStackControl x:Name="RadioButtonGroupSlepyHorny" Grid.Column="1" Grid.Row="4"/>
+                            <local:XRadioButtonStackControl x:Name="RadioButtonGroupDesireToWork" Grid.Column="1" Grid.Row="5"/>
+                            <local:XRadioButtonStackControl x:Name="RadioButtonGroupMoody" Grid.Column="1" Grid.Row="6"/>
+                            <local:XRadioButtonStackControl x:Name="RadioButtonGroupCalmHorny" Grid.Column="1" Grid.Row="7"/>
+                            <local:XRadioButtonStackControl x:Name="RadioButtonGroup8" Grid.Column="1" Grid.Row="8"/>            
+                      </Grid>
 
        <Grid Grid.Column="2">                        
          <Grid.RowDefinitions>
@@ -159,11 +177,54 @@
          <local:PainControl x:Name="one" Grid.Column="1" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Right"></local:PainControl>
        </Grid>
                   
-                </Grid>
+     </Grid>
             </TabItem>
             <TabItem Header="Тренды" Style="{StaticResource XStyleToTab}" HorizontalAlignment="Right" Margin="0">
-               
-            </TabItem>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="250"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="30"></RowDefinition>
+                        <RowDefinition Height="10"></RowDefinition>
+                        <RowDefinition Height="30"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="20"></RowDefinition>
+
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Row="0" Content="Выберите параметр:" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="18"></Label>
+                    <DataGrid Grid.Row="1"  Style="{StaticResource DataGridStyle}" ItemsSource="{Binding }" CanUserAddRows="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Название" Binding="{Binding Name}" ></DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Label Grid.Row="2" Content="Период:" FontSize="18" ></Label>
+                    <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="20,0,40,0" >
+                        <Label Content="c" FontSize="18" Width="40" HorizontalContentAlignment="Right"></Label>
+                        <DatePicker HorizontalAlignment="Stretch" Width="145" FontSize="14" DisplayDate="{Binding DateTime.Now}" SelectedDate="{Binding DateFrom}" VerticalContentAlignment="Center" Margin="2, 4, 2, 0" ></DatePicker>
+                    </StackPanel>
+                    <StackPanel Grid.Row="5" Orientation="Horizontal" Margin="20,0,40,0">
+                        <Label Content="по" Width="40" FontSize="18" VerticalAlignment="Stretch" HorizontalContentAlignment="Right"></Label>
+                        <DatePicker HorizontalAlignment="Stretch" Width="145" FontSize="14" DisplayDate="{Binding DateTIme.Now}" SelectedDate="{Binding DateTo}" Margin="2, 4, 2, 0" ></DatePicker>
+                    </StackPanel>
+                    <Button Grid.Row="6" Content="Показать график"  Style="{StaticResource XStyleToButton}" Click="CreateNewPlotSubWnd_Click" VerticalAlignment="Bottom"></Button>
+
+                </Grid>
+                <Grid x:Name="XGrid" Grid.Column="1" ScrollViewer.CanContentScroll="True" AllowDrop="True" VerticalAlignment="Stretch" >
+
+                    <ScrollViewer>
+                        <StackPanel x:Name="XStack" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Orientation="Vertical"  ScrollViewer.CanContentScroll="True" AllowDrop="True">
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+        </Grid>
+    </TabItem>
             <TabItem Header="Краткая сводка" Style="{StaticResource XStyleToTab}">
                 
             </TabItem>
