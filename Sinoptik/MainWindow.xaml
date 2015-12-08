@@ -63,8 +63,8 @@
                 <RowDefinition></RowDefinition>
               </Grid.RowDefinitions>
 
-              <TextBox x:Name="DAD"    Text="{Binding DBP}"        Grid.Row="1" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Margin="4,4,4,4" VerticalAlignment="Top" Width="66"/>
-              <Label  x:Name="GridLabel01" Grid.Row="0" Content="ДАД" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="15" Margin="4,4,4,4"></Label>
+              <TextBox x:Name="SAD"    Text="{Binding SBP}" Grid.Row="1" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Margin="4,4,4,4" VerticalAlignment="Top" Width="66"/>
+              <Label  x:Name="GridLabel01" Grid.Row="0" Content="Систолическое АД" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="15" Margin="4,4,4,4"></Label>
 
             </Grid>
 
@@ -74,8 +74,8 @@
                 <RowDefinition></RowDefinition>
               </Grid.RowDefinitions>
 
-              <TextBox x:Name="SAD"    Text="{Binding SBP}"        Grid.Row="1" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Margin="4,4,4,4" VerticalAlignment="Top" Width="66"/>
-              <Label  x:Name="GridLabel02" Grid.Row="0" Content="САД" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="15" Margin="4,4,4,4"></Label>
+              <TextBox x:Name="DAD"    Text="{Binding DBP}"        Grid.Row="1" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Margin="4,4,4,4" VerticalAlignment="Top" Width="66"/>
+              <Label  x:Name="GridLabel02" Grid.Row="0" Content="Диастолическое АД" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="15" Margin="4,4,4,4"></Label>
 
             </Grid>
 
