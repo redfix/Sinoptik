@@ -26,7 +26,7 @@ namespace Sinoptik.ViewModel
             }
         }
 
-        public Int16 Headache 
+        public Int16? Headache 
         {
             get
             {
@@ -42,7 +42,7 @@ namespace Sinoptik.ViewModel
 
          }
 
-         public Int16 RheumaticPain 
+         public Int16? RheumaticPain 
          {
             get
             {
@@ -57,7 +57,7 @@ namespace Sinoptik.ViewModel
             }
          }
 
-         public Int16 HeartPain
+         public Int16? HeartPain
          {
             get
             {
@@ -73,7 +73,7 @@ namespace Sinoptik.ViewModel
          }
 
 
-        private Boolean Validation(Int16 value)
+        private Boolean Validation(Int16? value)
         {
             if (value > 10 || value < 1)
                 return false;

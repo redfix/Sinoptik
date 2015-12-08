@@ -9,8 +9,8 @@ namespace Sinoptik.Model
     {
         public Int32 Id { get; set; }
 
-        public Int16 Hedache { get; set; }
-        public Int16 RheumaticPain { get; set; }
-        public Int16 HeartPain { get; set; }
+        public Int16? Hedache { get; set; }
+        public Int16? RheumaticPain { get; set; }
+        public Int16? HeartPain { get; set; }
     }
 }

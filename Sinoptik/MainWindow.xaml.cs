@@ -53,7 +53,10 @@ namespace Sinoptik
             else
                 _mwin.Exam.SAN.CalmHorny = null;
 
-            
+                
+            _mwin.Exam.SubjParams.Headache = this.one.HeadPainStack.GetChoiceResult();
+            _mwin.Exam.SubjParams.HeartPain = this.one.HeartPainStack.GetChoiceResult();
+            _mwin.Exam.SubjParams.RheumaticPain = this.one.BonePainStack.GetChoiceResult();
 
             _mwin.SaveChanges();
         }
