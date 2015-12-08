@@ -28,7 +28,7 @@ namespace Sinoptik.Model
 
             //здесь логика для изменений схемы (Fluent)
 
-
+            
         }
     }
 }
