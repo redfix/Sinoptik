@@ -95,6 +95,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DAL\XDAL.cs" />
+    <Compile Include="Migrations\201512141036285_New.cs" />
+    <Compile Include="Migrations\201512141036285_New.Designer.cs">
+      <DependentUpon>201512141036285_New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512141132365_NullablesInExams.cs" />
+    <Compile Include="Migrations\201512141132365_NullablesInExams.Designer.cs">
+      <DependentUpon>201512141132365_NullablesInExams.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\XPlot.cs" />
     <Compile Include="StartApp.cs" />
     <Compile Include="Migrations\201510080955234_1.cs" />
@@ -172,7 +181,7 @@
   <ItemGroup>
     <Compile Include="Model\Enums.cs" />
     <Compile Include="Model\XClient.cs" />
-    <Compile Include="Model\XDBContext.cs" />
+    <Compile Include="DAL\XDBContext.cs" />
     <Compile Include="Model\XExam.cs" />
     <Compile Include="Model\XObjectivParameters.cs" />
     <Compile Include="Model\XSubjectivParameters.cs" />
@@ -199,6 +208,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201511051011313_AddCalmHornyIntoSANtest.resx">
       <DependentUpon>201511051011313_AddCalmHornyIntoSANtest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512141036285_New.resx">
+      <DependentUpon>201512141036285_New.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512141132365_NullablesInExams.resx">
+      <DependentUpon>201512141132365_NullablesInExams.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

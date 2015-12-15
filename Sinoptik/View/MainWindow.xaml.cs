@@ -17,7 +17,7 @@ namespace Sinoptik.View
 
             _mwin = new XMainWindowVM();
 
-            DataContext = _mwin.Exam;
+            DataContext = _mwin;
 
         }
 
@@ -59,6 +59,11 @@ namespace Sinoptik.View
             _mwin.Exam.SubjParams.RheumaticPain = this.one.BonePainStack.GetChoiceResult();
 
             _mwin.SaveChanges();
+        }
+
+        private void CreateNewPlotSubWnd_Click(object sender, RoutedEventArgs e)
+        {
+            XStack.Children.Add(_mwin.AddWnd());
         }
     }
 }

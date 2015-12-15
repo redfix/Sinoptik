@@ -1,6 +1,7 @@
 ﻿using System;
 using Sinoptik.Model;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Sinoptik.ViewModel
 {
@@ -13,7 +14,7 @@ namespace Sinoptik.ViewModel
         {
             _client = new XClient();
             ExamCollection = new List<XExamVM>();
-
+            
         }
         public XClientVM(XClient client)
         {
@@ -125,6 +126,49 @@ namespace Sinoptik.ViewModel
         {
             this.ExamCollection.Add(ex);
             Client.ExamsCollection.Add(ex.Exam);
+        }
+
+
+        //private IEnumerable<KeyValuePair<DateTime, Double>> ExecParamValueQuery(String namePram, DateTime from, DateTime to)
+        //{
+        //    IDictionary<DateTime, Double> dict = new Dictionary<DateTime, Double>(50);
+
+        //}
+
+        public IEnumerable<KeyValuePair<DateTime, Double>> GetParameterValue(String namePram, DateTime from, DateTime to)
+       // public void GetParameterValue(String namePram, DateTime from, DateTime to)
+        {
+            IDictionary<DateTime, Double> dict = new Dictionary<DateTime, Double>(50);
+            switch (namePram)
+            {
+                case "ЧСС":
+                    var v = this.ExamCollection.Select((a) =>
+                        {
+                            if (a.DateAndTime.Date >= from && a.DateAndTime.Date <= to)
+                                return new { a.DateAndTime.Date, a.HeartRate };
+                            else return null;
+                        }
+                        
+                   ).Where(a => a != null);
+                    dict = v.ToDictionary((a => a.Date), (va => (Double)va.HeartRate));
+
+                    break;
+                case "СисАД":
+
+                    break;
+                case "ДиастАД":
+
+                    break;
+                case "ЧД":
+
+                    break;
+
+                default: break;
+
+                 
+            }
+
+            return dict;
         }
     }
 }

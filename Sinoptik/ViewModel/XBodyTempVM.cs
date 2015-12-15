@@ -26,5 +26,7 @@ namespace Sinoptik.ViewModel
             Value = tempValue; 
         }
 
+
+
     }
 }
