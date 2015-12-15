@@ -21,25 +21,24 @@ namespace Sinoptik.Model
         public XWeather Weather { get; set; }
        
         [Attr.Schema.ForeignKey("SubjParams")]
-        public Int32 SubjParamsId { get; set; }
+        public Int32? SubjParamsId { get; set; }
         public XSubjectivParameters SubjParams { get; set; }
 
         [Attr.Schema.ForeignKey("ObjParams")]
-        public Int32 ObjParamsId { get; set; }
+        public Int32? ObjParamsId { get; set; }
         public XObjectivParameters ObjParams { get; set; }        
 
         [Attr.Schema.ForeignKey("SANTest")]
-        public Int32 SANTestId { get; set; }
+        public Int32? SANTestId { get; set; }
         public XSANTest SANTest { get; set; }
-
 
 
         public XExam()
         {
-            Weather = new XWeather();
-            SubjParams = new XSubjectivParameters();
-            ObjParams = new XObjectivParameters();
-            SANTest = new XSANTest();
+            //Weather = new XWeather();
+            //SubjParams = new XSubjectivParameters();
+            //ObjParams = new XObjectivParameters();
+            //SANTest = new XSANTest();
         }
     }
 }

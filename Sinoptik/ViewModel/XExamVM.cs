@@ -25,7 +25,7 @@ namespace Sinoptik.ViewModel
         public XExamVM(XExam exam)
         {
             _exam = exam;
-            _heartRate = new XHeartRateVM();
+            _heartRate = new XHeartRateVM(exam.ObjParams.HeartRate);
            // _heartRate.Value = exam.ObjParams.HeartRate;
             _san = new XSANVM(exam.SANTest);
             _subjParams = new XSubjectivParametersVM(exam.SubjParams);

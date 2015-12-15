@@ -5,14 +5,14 @@ namespace Sinoptik.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Sinoptik.Model.XDBContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<Sinoptik.DAL.XDBContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(Sinoptik.Model.XDBContext context)
+        protected override void Seed(Sinoptik.DAL.XDBContext context)
         {
             //  This method will be called after migrating to the latest version.
 

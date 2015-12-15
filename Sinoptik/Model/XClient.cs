@@ -36,7 +36,7 @@ namespace Sinoptik.Model
 
         public XClient()
         {
-            ExamsCollection = new HashSet<XExam>();
+            ExamsCollection = new Collection<XExam>();
             
         }
     }

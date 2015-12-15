@@ -17,7 +17,7 @@ namespace Sinoptik.View
 
             _mwin = new XMainWindowVM();
 
-            DataContext = _mwin.Exam;
+            DataContext = _mwin;
 
         }
 
@@ -63,7 +63,7 @@ namespace Sinoptik.View
 
         private void CreateNewPlotSubWnd_Click(object sender, RoutedEventArgs e)
         {
-
+            XStack.Children.Add(_mwin.AddWnd());
         }
     }
 }

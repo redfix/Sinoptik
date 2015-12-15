@@ -84,7 +84,7 @@
                             </Grid.RowDefinitions>
 
                             <Label  x:Name="GridLabel00" Grid.Row="0" Content="ЧСС, уд/мин" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="15" Margin="4,4,4,4"></Label>
-                            <TextBox x:Name="HR"     Text="{Binding HeartRate}"  Grid.Row="1" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Margin="4,4,4,4" VerticalAlignment="Top" Width="66"/>
+                            <TextBox x:Name="HR"     Text="{Binding Exam.HeartRate}"  Grid.Row="1" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Margin="4,4,4,4" VerticalAlignment="Top" Width="66"/>
 
                         </Grid>
 
@@ -94,7 +94,7 @@
                             <RowDefinition></RowDefinition>
                           </Grid.RowDefinitions>
 
-                          <TextBox x:Name="SAD"    Text="{Binding SBP}" Grid.Row="1" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Margin="4,4,4,4" VerticalAlignment="Top" Width="66"/>
+                            <TextBox x:Name="SAD"    Text="{Binding Exam.SBP}" Grid.Row="1" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Margin="4,4,4,4" VerticalAlignment="Top" Width="66"/>
                           <Label  x:Name="GridLabel01" Grid.Row="0" Content="Систолическое АД" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="15" Margin="4,4,4,4"></Label>
 
                         </Grid>
@@ -105,7 +105,7 @@
                             <RowDefinition></RowDefinition>
                           </Grid.RowDefinitions>
 
-                          <TextBox x:Name="DAD"    Text="{Binding DBP}"        Grid.Row="1" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Margin="4,4,4,4" VerticalAlignment="Top" Width="66"/>
+                            <TextBox x:Name="DAD"    Text="{Binding Exam.DBP}"        Grid.Row="1" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Margin="4,4,4,4" VerticalAlignment="Top" Width="66"/>
                           <Label  x:Name="GridLabel02" Grid.Row="0" Content="Диастолическое АД" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="15" Margin="4,4,4,4"></Label>
 
                         </Grid>
@@ -117,7 +117,7 @@
                           </Grid.RowDefinitions>
 
                           <TextBlock  x:Name="GridLabel03" TextWrapping="WrapWithOverflow" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="15" >Частота дыхания, вдох/мин</TextBlock>
-                          <TextBox x:Name="Breath" Text="{Binding BreathRate}" Grid.Row="1" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Margin="4,4,4,4" VerticalAlignment="Top" Width="66"/>
+                            <TextBox x:Name="Breath" Text="{Binding Exam.BreathRate}" Grid.Row="1" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Margin="4,4,4,4" VerticalAlignment="Top" Width="66"/>
 
                         </Grid>
            
@@ -199,11 +199,14 @@
                     </Grid.RowDefinitions>
 
                     <Label Grid.Row="0" Content="Выберите параметр:" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="18"></Label>
-                    <DataGrid Grid.Row="1"  Style="{StaticResource DataGridStyle}" ItemsSource="{Binding }" CanUserAddRows="False">
+                    <!--DataGrid Grid.Row="1"  Style="{StaticResource DataGridStyle}" ItemsSource="{Binding ParamTypeNamesCollection}" AutoGenerateColumns="True" CanUserAddRows="False">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Название" Binding="{Binding Name}" ></DataGridTextColumn>
+                            < DataGridTextColumn Header="Название" Binding="{Binding Name}" ></>
                         </DataGrid.Columns>
-                    </DataGrid>
+                    </-->
+                        <ListBox Grid.Row="1" ItemsSource="{Binding ParamTypeNamesCVSView}" IsSynchronizedWithCurrentItem="True" Background="AliceBlue" >
+                            
+                    </ListBox>
                     <Label Grid.Row="2" Content="Период:" FontSize="18" ></Label>
                     <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="20,0,40,0" >
                         <Label Content="c" FontSize="18" Width="40" HorizontalContentAlignment="Right"></Label>
