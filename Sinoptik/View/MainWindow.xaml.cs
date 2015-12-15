@@ -60,5 +60,10 @@ namespace Sinoptik.View
 
             _mwin.SaveChanges();
         }
+
+        private void CreateNewPlotSubWnd_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
