@@ -39,16 +39,21 @@ namespace Sinoptik.ViewModel
             _breathRate = new XBreathRateVM(exam.ObjParams.BreathRate);
         }
 
-        public XExamVM() : this(new XExam())
+        public XExamVM() 
         {
-            //_exam = new XExam();
-            //_heartRate = new XHeartRateVM();
-            //_san = new XSANVM(_exam.SANTest);
-            //_subjParams = new XSubjectivParametersVM(_exam.SubjParams);
-            //_bodyTemp = new XBodyTempVM();
-            //_sBP = new XSistolicBloodPressureVM();
-            //_dBP = new XDiastolicBloodPressureVM();
-            //_weather = new XWeatherVM(_exam.Weather);
+            _exam = new XExam();
+            _exam.ObjParams = new XObjectivParameters();
+            _exam.SANTest = new XSANTest();
+            _exam.SubjParams = new XSubjectivParameters();
+            _exam.Weather = new XWeather();
+            _heartRate = new XHeartRateVM();
+            _san = new XSANVM(new XSANTest());
+            _subjParams = new XSubjectivParametersVM(new XSubjectivParameters());
+            _bodyTemp = new XBodyTempVM();
+            _sBP = new XSistolicBloodPressureVM();
+            _dBP = new XDiastolicBloodPressureVM();
+            _weather = new XWeatherVM(new XWeather());
+            _breathRate = new XBreathRateVM();
         }
 
         internal XExam Exam

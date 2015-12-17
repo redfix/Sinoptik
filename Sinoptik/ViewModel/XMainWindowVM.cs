@@ -15,8 +15,8 @@ namespace Sinoptik.ViewModel
     {
        readonly XExamVM _exam;
         //   readonly XDBContext _context;
-       public  readonly XDAL _DAL;
-       readonly XClientVM _client;
+        private readonly XDAL _dAL;
+        readonly XClientVM _client;
         readonly IEnumerable<String> _paramTypeNamesCollection; 
         readonly CollectionViewSource _paramTypeNamesCVSView;
 
@@ -27,8 +27,8 @@ namespace Sinoptik.ViewModel
 
         public XMainWindowVM()
         {
-            //_exam = new XExamVM();
-            _DAL = new XDAL("DBSinoptik");
+            _exam = new XExamVM();
+            _dAL = new XDAL("DBSinoptik");
             _paramTypeNamesCollection = new List<String> 
             {
                 "ЧСС",
@@ -42,11 +42,11 @@ namespace Sinoptik.ViewModel
             _paramTypeNamesCVSView.View.CurrentChanged += ParamTypeNameView_CurrentChanged;
 
 
-            IEnumerable<XClient> clients = _DAL.GetEntityCollection<XClient>("ExamsCollection");
-           IEnumerable<XExam> exams = _DAL.GetEntityCollection<XExam>("Weather", "ObjParams");
+            IEnumerable<XExam> exams = _dAL.GetEntityCollection<XExam>("Weather", "ObjParams");
+            IEnumerable<XClient> clients = _dAL.GetEntityCollection<XClient>("ExamsCollection");
 
-            _client = new XClientVM(clients.First(cl => cl.Id == 1));
-            //  _act = new Action(SaveChanges);
+            _client = new XClientVM(clients.First(cl => cl.Id == 2));
+            //_act = new Action(SaveChanges);
         }
 
 
@@ -117,10 +117,18 @@ namespace Sinoptik.ViewModel
             }
         }
 
+        internal XDAL DAL
+        {
+            get
+            {
+                return _dAL;
+            }
+        }
+
         public void SaveChanges() 
         {
-            //_client.AddExam(Exam);
-            //_context.SaveChanges();
+            _client.AddExam(Exam);
+            DAL.SaveChanges();
         }
 
 
