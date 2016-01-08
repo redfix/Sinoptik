@@ -2,7 +2,7 @@
 using System;
 using System.Data.Entity.Infrastructure;
 using System.Data.Entity.Core.Objects;
-
+using Sinoptik.Model;
 
 namespace Sinoptik.DAL 
 {
@@ -12,12 +12,14 @@ namespace Sinoptik.DAL
         readonly ObjectContext _objContext;
         readonly String _connection;
 
+
         public XDAL(String connectionName)
         {
             _connection = connectionName;
             _dbContext = new XDBContext(connectionName);
 
             _objContext = ((IObjectContextAdapter)_dbContext).ObjectContext;
+
         }
 
 
@@ -42,6 +44,7 @@ namespace Sinoptik.DAL
             }
         }
 
+
         /// <summary>
         /// Возвращает коллекцию объектов типа <T> контекста БД  
         /// </summary>
@@ -52,10 +55,12 @@ namespace Sinoptik.DAL
         {
 
             var v = ObjContext.CreateObjectSet<T>();
-            
+
+            List<T> list = new List<T>(v); //только так работает с localdb, с SQLServer работает без этого
+
             foreach(var prop in properties)
             {
-                LoadProperty<T>(v, prop);
+                LoadProperty<T>(list, prop);
             }
 
             return v;
@@ -78,9 +83,7 @@ namespace Sinoptik.DAL
 
         internal void DeleteObject<T>(T entity) 
         {
-
-                ObjContext.DeleteObject(entity);
-            
+            ObjContext.DeleteObject(entity);            
         }
 
 
@@ -98,6 +101,11 @@ namespace Sinoptik.DAL
         public void Dispose()
         {
             DbContext.Dispose();
+        }
+
+        public IEnumerable<T> CreateObjSet<T>() where T : class
+        {  
+            return ObjContext.CreateObjectSet<T>();
         }
     }
 }
