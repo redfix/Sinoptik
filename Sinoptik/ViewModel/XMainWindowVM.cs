@@ -45,7 +45,8 @@ namespace Sinoptik.ViewModel
             IEnumerable<XExam> exams = _dAL.GetEntityCollection<XExam>("Weather", "ObjParams");
             IEnumerable<XClient> clients = _dAL.GetEntityCollection<XClient>("ExamsCollection");
 
-            _client = new XClientVM(clients.First(cl => cl.Id == 2));
+            if (clients.Count() > 0)
+              _client = new XClientVM(clients.First(cl => cl.Id == 2));
             //_act = new Action(SaveChanges);
         }
 
@@ -125,10 +126,11 @@ namespace Sinoptik.ViewModel
             }
         }
 
-        public void SaveChanges() 
+        public void SaveChanges()
         {
+          if (_client != null)
             _client.AddExam(Exam);
-            DAL.SaveChanges();
+          DAL.SaveChanges();
         }
 
 
@@ -140,9 +142,10 @@ namespace Sinoptik.ViewModel
 
         public XPlot CreatePlot()
         {
-            XPlot plot = new XPlot();
+          XPlot plot = new XPlot();
+          if(_client != null)
             plot.CreatePlot(this._client.GetParameterValue(SelectedParamName, DateFrom, DateTo), SelectedParamName);
-            return plot;
+          return plot;
         }
     }
 }
