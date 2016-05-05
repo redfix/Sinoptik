@@ -30,7 +30,7 @@ namespace Sinoptik.View
             for(Int16 i=0; i<7; ++i)
             {
                 if (((RadioButton)XButtonStack.Children[i]).IsChecked == true)
-                    return i;
+                    return ++i;
             }
             return null;
         }

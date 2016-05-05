@@ -76,11 +76,16 @@ namespace Sinoptik.ViewModel
             }
         }
 
-        internal XSANVM SAN 
+        public XSANVM SAN 
         {
             get 
             {
                 return _san;
+            }
+            set
+            {
+                _exam.SANTest = value.SANTest;
+              
             }
         }
 
@@ -159,6 +164,10 @@ namespace Sinoptik.ViewModel
             get
             {
                 return _subjParams;
+            }
+            set 
+            {
+                _exam.SubjParams = value.SubjParams;
             }
         }
 

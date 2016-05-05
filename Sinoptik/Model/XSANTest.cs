@@ -17,6 +17,7 @@ namespace Sinoptik.Model
         public Int16? SANSlepyHorny { get; set; }
         public Int16? SANDesireToWork { get; set; }
         public Int16? SANCalmHorny { get; set; }
+        public Int16? OptimismPessimism { get; set; }
 
     }
 }

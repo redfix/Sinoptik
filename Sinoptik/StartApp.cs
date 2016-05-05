@@ -3,7 +3,7 @@
 
 namespace Sinoptik
 {
-    public class StartApp
+     sealed class StartApp
     {
         [STAThread()]
         static void Main()

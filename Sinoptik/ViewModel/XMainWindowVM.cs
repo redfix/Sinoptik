@@ -47,6 +47,7 @@ namespace Sinoptik.ViewModel
 
             if (clients.Count() > 0)
               _client = new XClientVM(clients.First(cl => cl.Id == 2));
+       //     _client.AddExam(_exam);
             //_act = new Action(SaveChanges);
         }
 

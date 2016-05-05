@@ -34,7 +34,7 @@ namespace Sinoptik.ViewModel
             set
             {
                 if (Validation(value) == false)
-                    throw new ArgumentException("Значение вне пределов допустимого диапозона (0-6)"); //?? или сделать это в методе с проверкой?
+                    throw new ArgumentException("Значение вне пределов допустимого диапозона (1-7)"); //?? или сделать это в методе с проверкой?
                 else
                 {
                     SANTest.SANFeeling = value;
@@ -52,7 +52,7 @@ namespace Sinoptik.ViewModel
             set
             {
                 if (Validation(value) == false)
-                    throw new ArgumentException("Значение вне пределов допустимого диапозона (0-6)");
+                    throw new ArgumentException("Значение вне пределов допустимого диапозона (1-7)");
                 else
                     SANTest.SANPassivActiv = value;
             }
@@ -67,7 +67,7 @@ namespace Sinoptik.ViewModel
             set
             {
                 if (Validation(value) == false)
-                    throw new ArgumentException("Значение вне пределов допустимого диапозона (0-6)");
+                    throw new ArgumentException("Значение вне пределов допустимого диапозона (1-7)");
                 else
                     SANTest.SANMood = value;
             }
@@ -82,7 +82,7 @@ namespace Sinoptik.ViewModel
             set
             {
                 if (Validation(value) == false)
-                    throw new ArgumentException("Значение вне пределов допустимого диапозона (0-6)");
+                    throw new ArgumentException("Значение вне пределов допустимого диапозона (1-7)");
                 else
                     SANTest.SANFullForceExhausted = value;
             }
@@ -97,7 +97,7 @@ namespace Sinoptik.ViewModel
             set
             {
                 if (Validation(value) == false)
-                    throw new ArgumentException("Значение вне пределов допустимого диапозона (0-6)");
+                    throw new ArgumentException("Значение вне пределов допустимого диапозона (1-7)");
                 else
                     SANTest.SANRestedTired = value;
             }
@@ -113,7 +113,7 @@ namespace Sinoptik.ViewModel
             set
             {
                 if (Validation(value) == false)
-                    throw new ArgumentException("Значение вне пределов допустимого диапозона (0-6)");
+                    throw new ArgumentException("Значение вне пределов допустимого диапозона (1-7)");
                 else
                     SANTest.SANSlepyHorny = value;
             }
@@ -129,7 +129,7 @@ namespace Sinoptik.ViewModel
             set
             {
                 if (Validation(value)  == false)
-                    throw new ArgumentException("Значение вне пределов допустимого диапозона (0-6)");
+                    throw new ArgumentException("Значение вне пределов допустимого диапозона (1-7)");
                 else
                     SANTest.SANDesireToWork = value;
             }
@@ -145,18 +145,32 @@ namespace Sinoptik.ViewModel
             set
             {
                 if (Validation(value) == false)
-                    throw new ArgumentException("Значение вне пределов допустимого диапозона (0-6)");
+                    throw new ArgumentException("Значение вне пределов допустимого диапозона (1-7)");
                 else
                     SANTest.SANCalmHorny = value;
             }
         }
 
+        public Int16? OptimismPessimism
+        {
+            get
+            {
+                return SANTest.OptimismPessimism;
+            }
+            set
+            {
+                if (Validation(value) == false)
+                    throw new ArgumentException("Значение вне пределов допустимого диапозона (1-7)");
+                else
+                    SANTest.OptimismPessimism = value;
+            }
+        }
 
         private Boolean? Validation(Int16? value)
         {
             if (value == null)
                 return null;
-            if (value > 6 || value < 1)
+            if (value > 7 || value < 1)
                 return false;
             else
                 return true;

@@ -167,7 +167,7 @@
                             <local:XRadioButtonStackControl x:Name="RadioButtonGroupDesireToWork" Grid.Column="1" Grid.Row="5"/>
                             <local:XRadioButtonStackControl x:Name="RadioButtonGroupMoody" Grid.Column="1" Grid.Row="6"/>
                             <local:XRadioButtonStackControl x:Name="RadioButtonGroupCalmHorny" Grid.Column="1" Grid.Row="7"/>
-                            <local:XRadioButtonStackControl x:Name="RadioButtonGroup8" Grid.Column="1" Grid.Row="8"/>            
+                            <local:XRadioButtonStackControl x:Name="RadioButtonGroupOptimismPessimism" Grid.Column="1" Grid.Row="8"/>            
                       </Grid>
 
        <Grid Grid.Column="2">                        

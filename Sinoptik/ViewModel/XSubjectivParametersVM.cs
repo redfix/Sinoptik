@@ -35,7 +35,7 @@ namespace Sinoptik.ViewModel
             set
             {
                 if (!Validation(value))
-                    throw new ArgumentException("Значение вне пределов допустимого диапозона (1-10)");
+                    throw new ArgumentException("Значение вне пределов допустимого диапозона (0-10)");
                 else
                 SubjParams.Hedache = value;
             }
@@ -51,7 +51,7 @@ namespace Sinoptik.ViewModel
             set
             {
                 if (!Validation(value))
-                    throw new ArgumentException("Значение вне пределов допустимого диапозона (1-10)");
+                    throw new ArgumentException("Значение вне пределов допустимого диапозона (0-10)");
                 else
                 SubjParams.Hedache = value;
             }
@@ -66,7 +66,7 @@ namespace Sinoptik.ViewModel
             set
             {
                 if (!Validation(value))
-                    throw new ArgumentException("Значение вне пределов допустимого диапозона (1-10)");
+                    throw new ArgumentException("Значение вне пределов допустимого диапозона (0-10)");
                 else
                 SubjParams.HeartPain = value;
             }
@@ -75,7 +75,7 @@ namespace Sinoptik.ViewModel
 
         private Boolean Validation(Int16? value)
         {
-            if (value > 10 || value < 1)
+            if (value > 10 || value < 0)
                 return false;
             else
                 return true;

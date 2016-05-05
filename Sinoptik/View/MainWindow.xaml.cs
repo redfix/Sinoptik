@@ -24,39 +24,52 @@ namespace Sinoptik.View
         
         private void WindowClosing(object sender, System.ComponentModel.CancelEventArgs e)
         {
+
+
+            XSANVM SAN = new XSANVM();
             if (this.RadioButtonGroupFeeling.CheckedValue() != null)
-                _mwin.Exam.SAN.Feeling = (Int16?)(6 - this.RadioButtonGroupFeeling.CheckedValue().Value);
+                SAN.Feeling = (Int16?)(8 - this.RadioButtonGroupFeeling.CheckedValue().Value);
             else
-                _mwin.Exam.SAN.Feeling = null;
+                SAN.Feeling = null;
 
             if (this.RadioButtonGroupFullForceExhausted.CheckedValue() != null)
-                _mwin.Exam.SAN.FullForceExhausted = (Int16?)(6 - this.RadioButtonGroupFullForceExhausted.CheckedValue().Value);
+                SAN.FullForceExhausted = (Int16?)(8 - this.RadioButtonGroupFullForceExhausted.CheckedValue().Value);
             else
-                _mwin.Exam.SAN.FullForceExhausted = null;
+                SAN.FullForceExhausted = null;
 
             if (this.RadioButtonGroupRestedTired.CheckedValue() != null)
-                _mwin.Exam.SAN.RestedTired = (Int16?)(6 - this.RadioButtonGroupRestedTired.CheckedValue().Value);
+                SAN.RestedTired = (Int16?)(8 - this.RadioButtonGroupRestedTired.CheckedValue().Value);
             else
-                _mwin.Exam.SAN.RestedTired = null;
+                SAN.RestedTired = null;
 
-            _mwin.Exam.SAN.PassivActiv = this.RadioButtonGroupPassivActiv.CheckedValue();
-            _mwin.Exam.SAN.SlepyHorny = this.RadioButtonGroupSlepyHorny.CheckedValue();
-            _mwin.Exam.SAN.DesireToWork = this.RadioButtonGroupDesireToWork.CheckedValue();
+            SAN.PassivActiv = this.RadioButtonGroupPassivActiv.CheckedValue();
+            SAN.SlepyHorny = this.RadioButtonGroupSlepyHorny.CheckedValue();
+            SAN.DesireToWork = this.RadioButtonGroupDesireToWork.CheckedValue();
 
             if (this.RadioButtonGroupMoody.CheckedValue() != null)
-                _mwin.Exam.SAN.Mood = (Int16?)(6 - this.RadioButtonGroupMoody.CheckedValue().Value);
+                SAN.Mood = (Int16?)(8 - this.RadioButtonGroupMoody.CheckedValue().Value);
             else
-                _mwin.Exam.SAN.Mood = null;
+                SAN.Mood = null;
 
             if (this.RadioButtonGroupCalmHorny.CheckedValue() != null)
-                _mwin.Exam.SAN.CalmHorny = (Int16?)(6 - this.RadioButtonGroupCalmHorny.CheckedValue().Value);
+                SAN.CalmHorny = (Int16?)(8 - this.RadioButtonGroupCalmHorny.CheckedValue().Value);
             else
-                _mwin.Exam.SAN.CalmHorny = null;
+                SAN.CalmHorny = null;
 
-                
-            _mwin.Exam.SubjParams.Headache = this.one.HeadPainStack.GetChoiceResult();
-            _mwin.Exam.SubjParams.HeartPain = this.one.HeartPainStack.GetChoiceResult();
-            _mwin.Exam.SubjParams.RheumaticPain = this.one.BonePainStack.GetChoiceResult();
+            if (this.RadioButtonGroupOptimismPessimism.CheckedValue() != null)
+                SAN.OptimismPessimism = (Int16?)(8 - RadioButtonGroupOptimismPessimism.CheckedValue().Value);
+            else
+                SAN.OptimismPessimism = null;
+
+            _mwin.Exam.SAN = SAN;
+
+            XSubjectivParametersVM subj = new XSubjectivParametersVM();
+
+            subj.Headache = this.one.HeadPainStack.GetChoiceResult();
+            subj.HeartPain = this.one.HeartPainStack.GetChoiceResult();
+            subj.RheumaticPain = this.one.BonePainStack.GetChoiceResult();
+
+            _mwin.Exam.SubjParams = subj;
 
             _mwin.SaveChanges();
         }

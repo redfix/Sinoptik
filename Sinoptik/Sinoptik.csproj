@@ -104,6 +104,10 @@
     <Compile Include="Migrations\201512141132365_NullablesInExams.Designer.cs">
       <DependentUpon>201512141132365_NullablesInExams.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605041312514_AddToSANOptimism.cs" />
+    <Compile Include="Migrations\201605041312514_AddToSANOptimism.Designer.cs">
+      <DependentUpon>201605041312514_AddToSANOptimism.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\XPlot.cs" />
     <Compile Include="StartApp.cs" />
     <Compile Include="Migrations\201510080955234_1.cs" />
@@ -214,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512141132365_NullablesInExams.resx">
       <DependentUpon>201512141132365_NullablesInExams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605041312514_AddToSANOptimism.resx">
+      <DependentUpon>201605041312514_AddToSANOptimism.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
